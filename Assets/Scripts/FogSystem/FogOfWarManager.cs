@@ -19,21 +19,27 @@ public class FogOfWarManager : MonoBehaviour
     private readonly Color _visibleColor = new Color(0, 0, 0, 0); // 시야 안 (완전 투명)
 
     [Header("View Quality")]
-    public LayerMask viewBlockerLayer; // 인스펙터에서 'ViewBlocker' 레이어를 선택해주세요.
-    public int rayCount = 36;          // 원형 시야를 위한 레이캐스트 개수 (높을수록 정밀하지만 부하 증가)
-    public float rayMaxDistance = 50f; // 레이캐스트 최대 거리 (캐릭터 시야 반경보다 충분히 길게)
+    public LayerMask viewBlockerLayer;          // 인스펙터에서 'ViewBlocker' 레이어를 선택해주세요.
+    public int rayCount = 36;                   // 원형 시야를 위한 레이캐스트 개수 (높을수록 정밀하지만 부하 증가)
+    public float rayCircleMaxDistance = 20f;    // 원형 시야 레이캐스트 최대 거리
+    public float rayForwardMaxDistance = 40f;   // 전방 시야 레이캐스트 최대 거리 (캐릭터 시야 반경보다 충분히 길게)
+    public float rayRotateRange = 360f;         // 레이캐스트 회전 최대 각도
 
     [Header("Render Textures")]
-    public RenderTexture visibilityRenderTexture; // 가시성 메시를 그릴 렌더 텍스처
+    public RenderTexture visibilityRenderTexture;   // 가시성 메시를 그릴 렌더 텍스처
+
+    [Header("Not visibility on half-fog")]
+    public LayerMask enemyLayer;                // 적 유닛을 위한 레이어 마스크
 
     // === 내부 관리 변수 ===
-    private Texture2D _exploredStatusTexture; // 탐험 상태만 저장하는 CPU 텍스처
-    private RenderTexture _finalFogTexture;   // 최종 결과물 렌더 텍스처
+    private Texture2D _exploredStatusTexture;                       // 탐험 상태만 저장하는 CPU 텍스처
+    private RenderTexture _finalFogTexture;                         // 최종 결과물 렌더 텍스처
     private Color[] _exploredPixels;
     private bool[] _isExplored;
+    private Queue<int> _updatePixels = new Queue<int>();            // 업데이트 된 픽셀 위치
 
-    // 탐험 상태가 바뀌었을 때만 CPU->GPU로 텍스처를 업데이트하기 위한 최적화 플래그
-    private bool _exploredTextureNeedsUpdate = true;
+    //// 탐험 상태가 바뀌었을 때만 CPU->GPU로 텍스처를 업데이트하기 위한 최적화 플래그
+    //private bool _exploredTextureNeedsUpdate = true;
 
     // 시야 영역을 그려주는 내부 mesh 변수
     private GameObject _visibilityMeshObject;
@@ -45,25 +51,33 @@ public class FogOfWarManager : MonoBehaviour
     private int[] _triangles;
 
     private Camera _mainCamera;
-    // 시야를 밝혀주는 모든 유닛의 Transform 리스트 (static으로 선언하여 어디서든 접근 가능)
+    // 시야를 밝혀주는 모든 유닛의 Transform 리스트
     public static List<Transform> VisionUnits = new List<Transform>();
+
+    // 현재 프레임에 보이는 모든 적 유닛의 목록 (HashSet으로 중복 방지)
+    private HashSet<Transform> _visibleEnemies = new HashSet<Transform>();
+    private LayerMask _combinedLayerMask;       // 종합적으로 감지할 레이어 마스크
 
     void Start()
     {
         _mainCamera = Camera.main;
-        //InitializeSelf();
         InitializeFog();
         InitializeView();
         StartCoroutine(UpdateFogCoroutine());
     }
-
-    // Fog Manager 초기화
-    void InitializeSelf()
+    private void LateUpdate()
     {
-        // 반드시 월드 원점(0,0,0)에 위치해야 좌표가 어긋나지 않습니다.
-        _visibilityMeshObject.transform.position = Vector3.zero;
-        _visibilityMeshObject.transform.rotation = Quaternion.identity;
-        _visibilityMeshObject.transform.localScale = Vector3.one;
+        // RenderTexture가 존재하면 전역 셰이더 변수로 전달
+        if (visibilityRenderTexture != null)
+        {
+            Shader.SetGlobalTexture("_FogTex", visibilityRenderTexture);
+        }
+
+        Shader.SetGlobalFloat("_FogScale", textureSize);
+        Shader.SetGlobalVector("_FogOffset", Vector3.zero);
+
+        var tex = Shader.GetGlobalTexture("_FogTex");
+        //Debug.Log(tex);
     }
 
     // 전장의 안개 관련 초기화
@@ -94,10 +108,13 @@ public class FogOfWarManager : MonoBehaviour
     // 시야 초기화
     void InitializeView()
     {
+        // 감지할 레이어 마스크 제작
+        _combinedLayerMask = viewBlockerLayer | enemyLayer;
+
         // 가시성 메시를 위한 오브젝트 생성
         _visibilityMeshObject = new GameObject("VisibilityMesh");
         _visibilityMeshObject.transform.SetParent(transform);
-        _visibilityMeshObject.layer = LayerMask.NameToLayer("VisibleInFog");
+        _visibilityMeshObject.layer = LayerMask.NameToLayer("FogOfVisible");
 
         _meshFilter = _visibilityMeshObject.AddComponent<MeshFilter>();
         _meshRenderer = _visibilityMeshObject.AddComponent<MeshRenderer>();
@@ -106,6 +123,7 @@ public class FogOfWarManager : MonoBehaviour
         // 메시를 그릴 머티리얼은 복잡한 셰이더가 필요 없으므로 단순한 단색 셰이더로 변경
         _meshRenderer.material = new Material(Shader.Find("Unlit/Color"));
         _meshRenderer.material.color = Color.white;
+        _meshRenderer.enabled = false;
 
         _visibilityMesh = new Mesh();
         _meshFilter.mesh = _visibilityMesh;
@@ -120,19 +138,27 @@ public class FogOfWarManager : MonoBehaviour
     {
         while (true)
         {
+            // 이전 위치를 모두 탐험한 색깔로 처리
+            UpdatePreviousLoc();
+
             // 1. 유닛들의 현재 위치를 기반으로 실시간 가시성 메시를 업데이트
             UpdateVisibilityMesh();
 
-            // 2. (최적화) 탐험 상태가 변경되었을 때만 CPU 데이터를 GPU 텍스처로 업로드
-            if (_exploredTextureNeedsUpdate)
-            {
-                UpdateExploredStatusTextureOnGPU();
-                _exploredTextureNeedsUpdate = false;
-            }
+            // 2. 생성된 메시를 기반으로 CPU에서 직접 탐험 상태를 기록
+            UpdateExploredStatusFromMeshCPU();
+            UpdateExploredStatusTextureOnGPU();
+            
 
-            // 3. [핵심] GPU를 사용해 두 텍스처를 최종 안개 텍스처로 합성
-            fogCombineMaterial.SetTexture("_MaskTex", visibilityRenderTexture);
-            Graphics.Blit(_exploredStatusTexture, _finalFogTexture, fogCombineMaterial);
+            // 3. (최적화) 탐험 상태가 변경되었을 때만 CPU 데이터를 GPU 텍스처로 업로드
+            //if (_exploredTextureNeedsUpdate)
+            //{
+            //    UpdateExploredStatusTextureOnGPU();
+            //    _exploredTextureNeedsUpdate = false;
+            //}
+
+            // 4. GPU를 사용해 두 텍스처를 최종 안개 텍스처로 합성
+            //fogCombineMaterial.SetTexture("_MaskTex", visibilityRenderTexture);
+            //Graphics.Blit(_exploredStatusTexture, _finalFogTexture, fogCombineMaterial);
 
             yield return new WaitForFixedUpdate();
         }
@@ -143,20 +169,36 @@ public class FogOfWarManager : MonoBehaviour
         if (VisionUnits.Count == 0)
         {
             _visibilityMesh.Clear();
+            _visibleEnemies.Clear();
             return;
         }
+
+        // 출력되는 적 목록 초기화
+        _visibleEnemies.Clear();
 
         // 현재는 첫 번째 유닛만 지원. 여러 유닛을 지원하려면 로직 수정 필요
         Transform unit = VisionUnits[0];
         float sightRadiusWorld = 15f;
 
         _vertices[0] = unit.position; // 메시의 중심점은 항상 유닛의 시야 기준점
-        float angleIncrement = 360f / rayCount;
+        float angleIncrement = 360 / rayCount;
+
+        // 캐릭터의 정면 방향을 가져옵니다. (Y축은 무시하여 수평 방향만 사용)
+        Vector3 forwardDirection = unit.forward;
+        forwardDirection.y = 0;
+        forwardDirection.Normalize();
 
         for (int i = 0; i < rayCount; i++)
         {
             float angle = i * angleIncrement * Mathf.Deg2Rad;
+
+            // 설정한 각도에 따라 전방과 원형 시야 거리 다르게 설정
             Vector3 direction = new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle));
+            float angleToForward = Vector3.Angle(forwardDirection, direction);
+            if (angleToForward <= rayRotateRange)
+                sightRadiusWorld = rayForwardMaxDistance;
+            else
+                sightRadiusWorld = rayCircleMaxDistance;
 
             RaycastHit hit;
             Vector3 vertexPosition;
@@ -172,7 +214,7 @@ public class FogOfWarManager : MonoBehaviour
             _vertices[i + 1] = vertexPosition;
 
             // 시야가 닿은 곳까지의 탐험 상태를 CPU 데이터에 기록
-            MarkLineAsExplored(WorldToTextureCoordinates(_vertices[0]),WorldToTextureCoordinates(vertexPosition));
+           //  MarkLineAsExplored(WorldToTextureCoordinates(_vertices[0]),WorldToTextureCoordinates(vertexPosition));
         }
 
         for (int i = 0; i < rayCount; i++)
@@ -195,38 +237,79 @@ public class FogOfWarManager : MonoBehaviour
         _exploredStatusTexture.Apply();
     }
 
-    // CPU 데이터(배열)에 '탐험됨' 상태를 기록하는 함수
-    void MarkLineAsExplored(Vector2Int start, Vector2Int end)
+    // 메시의 모든 삼각형을 순회하며 래스터라이즈(픽셀화)를 요청하는 메인 함수
+    void UpdateExploredStatusFromMeshCPU()
     {
-        int x0 = start.x;
-        int y0 = start.y;
-        int x1 = end.x;
-        int y1 = end.y;
+        // 메시의 삼각형 배열과 정점 배열을 가져옴
+        int[] triangles = _visibilityMesh.triangles;
+        Vector3[] vertices = _visibilityMesh.vertices;
 
-        int dx = Mathf.Abs(x1 - x0);
-        int dy = Mathf.Abs(y1 - y0);
-        int sx = (x0 < x1) ? 1 : -1;
-        int sy = (y0 < y1) ? 1 : -1;
-        int err = dx - dy;
-
-        while (true)
+        // 삼각형 배열은 3개의 인덱스가 하나의 삼각형을 의미하므로, 3씩 건너뛰며 순회
+        for (int i = 0; i < triangles.Length; i += 3)
         {
-            if (x0 >= 0 && x0 < textureSize && y0 >= 0 && y0 < textureSize)
-            {
-                int index = y0 * textureSize + x0;
-                if (!_isExplored[index])
-                {
-                    _isExplored[index] = true;
-                    _exploredPixels[index] = exploredColor;
-                    _exploredTextureNeedsUpdate = true; // 변경이 있었음을 플래그로 알림
-                }
-            }
+            // 현재 삼각형을 구성하는 세 정점의 월드 좌표를 가져옴
+            Vector3 v0_world = vertices[triangles[i]];
+            Vector3 v1_world = vertices[triangles[i + 1]];
+            Vector3 v2_world = vertices[triangles[i + 2]];
 
-            if (x0 == x1 && y0 == y1) break;
-            int e2 = 2 * err;
-            if (e2 > -dy) { err -= dy; x0 += sx; }
-            if (e2 < dx) { err += dx; y0 += sy; }
+            // 각 정점의 월드 좌표를 텍스처 좌표로 변환
+            Vector2Int v0_tex = WorldToTextureCoordinates(v0_world);
+            Vector2Int v1_tex = WorldToTextureCoordinates(v1_world);
+            Vector2Int v2_tex = WorldToTextureCoordinates(v2_world);
+
+            // 변환된 텍스처 좌표를 사용해 삼각형 내부를 픽셀로 채움
+            RasterizeTriangle(v0_tex, v1_tex, v2_tex);
         }
+    }
+
+    // 세 개의 텍스처 좌표로 정의된 삼각형 내부를 픽셀로 채우는 함수 (Scanline Algorithm)
+    void RasterizeTriangle(Vector2Int p0, Vector2Int p1, Vector2Int p2)
+    {
+        // 정점을 Y좌표 기준으로 정렬 (p0가 가장 위, p2가 가장 아래)
+        if (p0.y > p1.y) { var temp = p0; p0 = p1; p1 = temp; }
+        if (p0.y > p2.y) { var temp = p0; p0 = p2; p2 = temp; }
+        if (p1.y > p2.y) { var temp = p1; p1 = p2; p2 = temp; }
+
+        // 채워 넣기
+        int total_height = p2.y - p0.y;
+        for (int y = p0.y; y <= p2.y; y++)
+        {
+            if (y < 0 || y >= textureSize) continue;
+
+            bool second_half = y > p1.y || p1.y == p0.y;
+            int segment_height = second_half ? p2.y - p1.y : p1.y - p0.y;
+
+            float alpha = (float)(y - p0.y) / total_height;
+            float beta = (float)(y - (second_half ? p1.y : p0.y)) / segment_height;
+
+            Vector2 A = p0 + (Vector2)(p2 - p0) * alpha;
+            Vector2 B = second_half ? p1 + (Vector2)(p2 - p1) * beta : p0 + (Vector2)(p1 - p0) * beta;
+
+            if (A.x > B.x) { var temp = A; A = B; B = temp; }
+
+            for (int x = (int)A.x; x <= (int)B.x; x++)
+            {
+                if (x < 0 || x >= textureSize) continue;
+
+                int index = y * textureSize + x;
+
+                _updatePixels.Enqueue(index);
+                _isExplored[index] = true;
+                _exploredPixels[index] = _visibleColor;
+            }
+        }
+    }
+
+    // 이전에 업데이트된 위치를 모두 이전에 탐험되었다고 업데이트
+    private bool UpdatePreviousLoc()
+    {
+        while(_updatePixels.Count > 0)
+        {
+            int idx = _updatePixels.Dequeue();
+            _exploredPixels[idx] = exploredColor;
+        }
+
+        return true;
     }
 
     // 월드 좌표를 텍스처 좌표로 변환하는 함수
