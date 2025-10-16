@@ -513,6 +513,12 @@ MonoBehaviour:
   rayForwardMaxDistance: 15
   rayRotateRange: 30
   visibilityRenderTexture: {fileID: 8400000, guid: a40ef28aec44721469475f88ea1df140, type: 2}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+  logVisibilityChanges: 1
+  showVisibleEnemyGizmos: 1
+  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &553783820
 Transform:
   m_ObjectHideFlags: 0
@@ -712,6 +718,10 @@ PrefabInstance:
     - target: {fileID: 3161938037122749636, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3811476829620839070, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8036131335965279321, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1159,7 +1169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8666668614193820701, guid: dd4b0f7d561427d449d892404fc5ae74, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 4031
+      value: 8127
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

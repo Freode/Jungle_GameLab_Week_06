@@ -31,6 +31,11 @@ public class FogOfWarManager : MonoBehaviour
     [Header("Not visibility on half-fog")]
     public LayerMask enemyLayer;                // 적 유닛을 위한 레이어 마스크
 
+    [Header("Debugging")]
+    public bool logVisibilityChanges = true;            // 콘솔에서 시야 변경 로그를 출력할지 결정
+    public bool showVisibleEnemyGizmos = true;          // Scene 뷰에서 보이는 적 위에 원을 표시할
+    public Color gizmoColor = Color.red;
+
     // === 내부 관리 변수 ===
     private Texture2D _exploredStatusTexture;                       // 탐험 상태만 저장하는 CPU 텍스처
     private RenderTexture _finalFogTexture;                         // 최종 결과물 렌더 텍스처
@@ -166,15 +171,21 @@ public class FogOfWarManager : MonoBehaviour
 
     void UpdateVisibilityMesh()
     {
+        // 시야 유닛이 없을 때, 모두 제거
         if (VisionUnits.Count == 0)
         {
+            foreach (var enemy in _visibleEnemies)
+            {
+                if (enemy != null && logVisibilityChanges) 
+                    Debug.Log($"[시야 소실] {enemy.name}이(가) 사라졌습니다.");
+            }
             _visibilityMesh.Clear();
             _visibleEnemies.Clear();
             return;
         }
 
-        // 출력되는 적 목록 초기화
-        _visibleEnemies.Clear();
+        // 현재 프레임에서 시야에 들어온 유닛들을 임시로 저장할 HashSet 생성
+        HashSet<Transform> newlyFoundUnits = new HashSet<Transform>();
 
         // 현재는 첫 번째 유닛만 지원. 여러 유닛을 지원하려면 로직 수정 필요
         Transform unit = VisionUnits[0];
@@ -200,23 +211,87 @@ public class FogOfWarManager : MonoBehaviour
             else
                 sightRadiusWorld = rayCircleMaxDistance;
 
-            RaycastHit hit;
-            Vector3 vertexPosition;
+            // 1. RaycastAll을 사용하여 광선에 닿는 모든 오브젝트를 가져옵니다.
+            RaycastHit[] hits = Physics.RaycastAll(_vertices[0], direction, sightRadiusWorld, _combinedLayerMask);
+            // Vector3 vertexPosition;
 
-            if (Physics.Raycast(_vertices[0], direction, out hit, sightRadiusWorld, viewBlockerLayer))
+            // 2. 시야를 막는 가장 가까운 장애물의 거리를 찾습니다.
+            float closestBlockerDistance = sightRadiusWorld; // 기본값은 최대 시야 거리
+            foreach (var hit in hits)
             {
-                vertexPosition = hit.point;
+                // 부딪힌 오브젝트가 'ViewBlocker' 레이어라면
+                if (((1 << hit.collider.gameObject.layer) & viewBlockerLayer) != 0)
+                {
+                    // 가장 가까운 거리를 갱신합니다.
+                    if (hit.distance < closestBlockerDistance)
+                    {
+                        closestBlockerDistance = hit.distance;
+                    }
+                }
             }
-            else
+
+            // 3. 감지된 모든 적에 대해, 시야를 막는 장애물보다 앞에 있는지 확인합니다.
+            foreach (var hit in hits)
             {
-                vertexPosition = _vertices[0] + direction * sightRadiusWorld;
+                // 부딪힌 오브젝트가 'Enemy' 레이어이고,
+                if (((1 << hit.collider.gameObject.layer) & enemyLayer) != 0)
+                {
+                    // 가장 가까운 장애물보다 앞에 있다면,
+                    if (hit.distance < closestBlockerDistance)
+                    {
+                        Debug.Log(hit);
+                        // 보이는 적 목록에 추가합니다.
+                        newlyFoundUnits.Add(hit.transform);
+                    }
+                }
             }
+
+            // 4. 최종 시야 메시의 정점 위치는 가장 가까운 장애물까지로 설정합니다.
+            Vector3 vertexPosition = _vertices[0] + direction * closestBlockerDistance;
             _vertices[i + 1] = vertexPosition;
-
-            // 시야가 닿은 곳까지의 탐험 상태를 CPU 데이터에 기록
-           //  MarkLineAsExplored(WorldToTextureCoordinates(_vertices[0]),WorldToTextureCoordinates(vertexPosition));
+ 
         }
 
+        // 2-1. 새로 시야에 들어온 적을 찾아서 출력합니다.
+        foreach (var enemy in newlyFoundUnits)
+        {
+            // '새로 찾은 목록'에는 있는데 '이전 목록'에는 없다면 => 새로 나타난 적입니다.
+            if (_visibleEnemies.Contains(enemy) == true)
+                continue;
+            
+            if (logVisibilityChanges) 
+                Debug.Log($"[시야 포착] {enemy.name}이(가) 나타났습니다.");
+
+            if (enemy.gameObject.TryGetComponent(out IUnitWithFog unitWithFog))
+                unitWithFog.OnMeshActive();
+        }
+
+        // 2-2. 시야에서 사라진 적을 찾아서 출력합니다.
+        foreach (var enemy in _visibleEnemies)
+        {
+            // '이전 목록'에는 있었는데 '새로 찾은 목록'에는 없다면 => 사라진 적입니다.
+            if (newlyFoundUnits.Contains(enemy) == true)
+                continue;
+            
+            if (enemy == null) // 유닛이 파괴되어 null이 된 경우를 대비
+                continue;
+                
+            if (logVisibilityChanges) 
+                Debug.Log($"[시야 소실] {enemy.name}이(가) 사라졌습니다.");
+
+            if (enemy.gameObject.TryGetComponent(out IUnitWithFog unitWithFog))
+                unitWithFog.OnMeshInactive();
+
+        }
+
+        // 2-3. 다음 프레임을 위해, 현재 보이는 적 목록(VisibleEnemies)을 최신 상태로 업데이트합니다.
+        _visibleEnemies.Clear();
+        foreach (var enemy in newlyFoundUnits)
+        {
+            _visibleEnemies.Add(enemy);
+        }
+
+        // 메시 생성
         for (int i = 0; i < rayCount; i++)
         {
             _triangles[i * 3 + 0] = 0;
@@ -322,5 +397,28 @@ public class FogOfWarManager : MonoBehaviour
         x = Mathf.Clamp(x, 0, textureSize - 1);
         z = Mathf.Clamp(z, 0, textureSize - 1);
         return new Vector2Int(x, z);
+    }
+
+    // 씬 뷰에서 디버깅 정보를 시각적으로 그립니다. 게임 빌드에는 포함되지 않습니다.
+    private void OnDrawGizmos()
+    {
+        // 기즈모 표시 옵션이 꺼져있으면 아무것도 그리지 않습니다.
+        if (!showVisibleEnemyGizmos) return;
+
+        // VisibleEnemies 목록이 비어있으면 그릴 필요가 없습니다.
+        if (_visibleEnemies == null || _visibleEnemies.Count == 0) return;
+
+        // 기즈모의 색상을 설정합니다.
+        Gizmos.color = gizmoColor;
+
+        // 현재 보이는 모든 적들의 위치에 원을 그립니다.
+        foreach (var enemy in _visibleEnemies)
+        {
+            if (enemy != null)
+            {
+                // 적의 위치에 반지름 1.5 크기의 와이어 구체를 그립니다.
+                Gizmos.DrawWireSphere(enemy.position, 1.5f);
+            }
+        }
     }
 }

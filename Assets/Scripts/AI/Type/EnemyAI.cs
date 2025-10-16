@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using NUnit.Framework;
+using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class EnemyAI : MonoBehaviour
+public class EnemyAI : MonoBehaviour, IUnitWithFog
 {
     [Header("Component References")]
     [HideInInspector] public NavMeshAgent agent;
@@ -16,7 +17,7 @@ public class EnemyAI : MonoBehaviour
 
     [Header("Detection & Combat Settings")]
     public float sightRange = 15f;
-    [Range(0, 360)] public float fieldOfViewAngle = 90f;
+    [UnityEngine.Range(0, 360)] public float fieldOfViewAngle = 90f;
     public float chaseSpeed = 6f;
 
     [Header("State Management")]
@@ -24,6 +25,9 @@ public class EnemyAI : MonoBehaviour
 
     // 제네릭으로 선언된 상태 머신
     public StateMachine<EnemyAI> stateMachine;
+
+    // 모든 자식의 메시 랜더러 가지고 있기
+    private MeshRenderer[] _renderers;
 
     void Awake()
     {
@@ -42,6 +46,9 @@ public class EnemyAI : MonoBehaviour
 
         // 초기 상태를 PatrolState로 설정
         stateMachine.Initialize(new PatrolState(this, stateMachine));
+
+        // 모든 자식의 Mesh Renderer를 가져오기
+        _renderers = gameObject.GetComponentsInChildren<MeshRenderer>();
     }
 
     void Update()
@@ -78,6 +85,24 @@ public class EnemyAI : MonoBehaviour
         Vector3 rightRayDirection = rightRayRotation * transform.forward;
         Gizmos.DrawRay(transform.position, leftRayDirection * sightRange);
         Gizmos.DrawRay(transform.position, rightRayDirection * sightRange);
+    }
+
+    // 메시 모두 활성화
+    public void OnMeshActive()
+    {
+        foreach(MeshRenderer renderer in _renderers)
+        {
+            renderer.enabled = true;
+        }
+    }
+
+    // 메시 모두 비활성화
+    public void OnMeshInactive()
+    {
+        foreach (MeshRenderer renderer in _renderers)
+        {
+            renderer.enabled = false;
+        }
     }
 }
 
