@@ -63,11 +63,15 @@ public class FogOfWarManager : MonoBehaviour
     private HashSet<Transform> _visibleEnemies = new HashSet<Transform>();
     private LayerMask _combinedLayerMask;       // 종합적으로 감지할 레이어 마스크
 
-    void Start()
+    void Awake()
     {
         _mainCamera = Camera.main;
         InitializeFog();
         InitializeView();
+    }
+
+    void Start()
+    {
         StartCoroutine(UpdateFogCoroutine());
     }
     private void LateUpdate()
@@ -397,6 +401,15 @@ public class FogOfWarManager : MonoBehaviour
         x = Mathf.Clamp(x, 0, textureSize - 1);
         z = Mathf.Clamp(z, 0, textureSize - 1);
         return new Vector2Int(x, z);
+    }
+
+    // --- 월드맵 UI에 텍스처를 제공하기 위한 새로운 함수 ---
+    /// <summary>
+    /// 현재 씬의 탐험 상태가 기록된 안개 텍스처를 반환합니다.
+    /// </summary>
+    public Texture2D GetExploredMapTexture()
+    {
+        return _exploredStatusTexture;
     }
 
     // 씬 뷰에서 디버깅 정보를 시각적으로 그립니다. 게임 빌드에는 포함되지 않습니다.
