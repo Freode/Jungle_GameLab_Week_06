@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class BaseInteract : MonoBehaviour, IInteract
 {
+    // 외곽선 활성화할 객체
+    public List<GameObject> outlineObjects;
+
 
     void Start()
     {
@@ -14,11 +18,13 @@ public class BaseInteract : MonoBehaviour, IInteract
 
     void IInteract.OnHoverEnter()
     {
-        gameObject.layer = LayerMask.NameToLayer("Outline");
+        foreach(GameObject outlineObject in outlineObjects)
+            outlineObject.layer = LayerMask.NameToLayer("Outline");
     }
 
     void IInteract.OnHoverExit()
     {
-        gameObject.layer = LayerMask.NameToLayer("Interact");
+        foreach (GameObject outlineObject in outlineObjects)
+            outlineObject.layer = LayerMask.NameToLayer("Interact");
     }
 }

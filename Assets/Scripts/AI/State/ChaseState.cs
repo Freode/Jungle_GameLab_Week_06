@@ -15,10 +15,23 @@ public class ChaseState : State<EnemyAI>
 
     public override void Execute()
     {
+        if (owner.IsDie())
+        {
+            stateMachine.ChangeState(new DieState(owner, stateMachine));
+            return;
+        }
+
         // 플레이어를 놓치면 순찰 상태로 전환합니다.
-        if (!owner.IsPlayerInSight())
+        if ((owner.IsPlayerInSight() == false) && (owner._isHitting == false))
         {
             stateMachine.ChangeState(new PatrolState(owner, stateMachine));
+            return;
+        }
+
+        // 플레이어와 거리가 가까워지면, 공격을 시도합니다.
+        if(Vector3.Distance(owner.transform.position, owner.player.position) <= 1f)
+        {
+            stateMachine.ChangeState(new AttackState(owner, stateMachine));
             return;
         }
 

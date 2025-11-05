@@ -1,15 +1,16 @@
-﻿using NUnit.Framework;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class EnemyAI : MonoBehaviour, IUnitWithFog
+public class EnemyAI : MonoBehaviour, IUnitWithFog, ITakeDamage
 {
     [Header("Component References")]
     [HideInInspector] public NavMeshAgent agent;
     public Transform player;
 
     [Header("Patrol Settings")]
+    public float patrolHp = 20f;
     public float patrolRadius = 20f;
     public float patrolSpeed = 3.5f;
     public float patrolWaitTime = 2f;
@@ -28,6 +29,10 @@ public class EnemyAI : MonoBehaviour, IUnitWithFog
 
     // 모든 자식의 메시 랜더러 가지고 있기
     private MeshRenderer[] _renderers;
+
+    private bool _isUpdate = true;
+    public bool _isHitting {private set; get;}
+    private Coroutine _hitCoroutine;
 
     void Awake()
     {
@@ -53,8 +58,9 @@ public class EnemyAI : MonoBehaviour, IUnitWithFog
 
     void Update()
     {
-        // 상태 머신의 Execute를 호출합니다.
-        stateMachine.Execute();
+        if(_isUpdate)
+            // 상태 머신의 Execute를 호출합니다.
+            stateMachine.Execute();
     }
 
     // 플레이어가 현재 시야 안에 있는지 확인 - 수정 필요 - 
@@ -90,7 +96,10 @@ public class EnemyAI : MonoBehaviour, IUnitWithFog
     // 메시 모두 활성화
     public void OnMeshActive()
     {
-        foreach(MeshRenderer renderer in _renderers)
+        if (_isUpdate == false)
+            return;
+
+        foreach (MeshRenderer renderer in _renderers)
         {
             renderer.enabled = true;
         }
@@ -99,10 +108,47 @@ public class EnemyAI : MonoBehaviour, IUnitWithFog
     // 메시 모두 비활성화
     public void OnMeshInactive()
     {
+        if (_isUpdate == false)
+            return;
+
         foreach (MeshRenderer renderer in _renderers)
         {
             renderer.enabled = false;
         }
+    }
+
+    public void TakeDamage(GameObject opponent, float damage)
+    {
+        patrolHp -= damage;
+        _isHitting = true;
+
+        stateMachine.ChangeState(new ChaseState(this, stateMachine));
+
+        if (_hitCoroutine != null)
+            StopCoroutine(_hitCoroutine);
+        _hitCoroutine = StartCoroutine(HitCoroutine());
+    }
+
+    public bool IsDie()
+    {
+        if (patrolHp > 0f)
+            return false;
+
+        return true;
+    }
+
+    public void SetUpdate(bool isUpdate)
+    {
+        _isUpdate = isUpdate;
+    }
+
+    IEnumerator HitCoroutine()
+    {
+        _isHitting = true;
+
+        yield return new WaitForSeconds(5f);
+
+        _isHitting = false;
     }
 }
 

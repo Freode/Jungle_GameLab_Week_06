@@ -22,6 +22,12 @@ public class PatrolState : State<EnemyAI>
 
     public override void Execute()
     {
+        if(owner.IsDie())
+        {
+            stateMachine.ChangeState(new DieState(owner, stateMachine));
+            return;
+        }
+
         if (owner.IsPlayerInSight())
         {
             // 상태를 전환할 때도 제네릭 타입에 맞춰줍니다.
