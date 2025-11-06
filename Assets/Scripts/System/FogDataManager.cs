@@ -6,8 +6,11 @@ public class FogDataManager : MonoBehaviour
     public static FogDataManager instance;
 
     public List<string> foggedSceneNames; // 안개 데이터를 관리할 씬 이름 목록
-    public int combinedTextureSize = 2048; // 통합 맵 텍스처의 해상도 (예: 2048x2048)
-    public int individualSceneTextureSize = 1024; // 개별 씬 안개 맵의 해상도 (예: 1024x1024)
+    public List<Texture2D> worldMapPNGs; // 각 씬의 실제 월드맵 PNG (순서는 foggedSceneNames와 일치해야 함)
+    public List<Vector2> sceneWorldSizes; // 각 씬의 월드 크기 (x: width, y: height/depth) (순서는 foggedSceneNames와 일치해야 함)
+
+    public int combinedTextureSize = 2048; // 통합 맵 텍스처의 해상도
+    public int individualSceneTextureSize = 1024; // 개별 씬 안개 맵의 해상도
 
     void Awake()
     {
@@ -157,3 +160,57 @@ public class FogDataManager : MonoBehaviour
         return sceneTexture;
     }
 }
+
+//    /// <summary>
+//    /// 특정 씬의 탐험된 안개 데이터를 Texture2D로 반환합니다.
+//    /// </summary>
+//    /// <param name="sceneName">안개 데이터를 가져올 씬 이름</param>
+//    /// <param name="textureSize">안개 맵 텍스처의 해상도</param>
+//    /// <param name="unexploredColor">미탐험 영역의 색상</param>
+//    /// <param name="exploredColor">탐험된 영역의 색상</param>
+//    /// <returns>씬의 안개 맵 Texture2D</returns>
+//    public Texture2D GetIndividualExploredMapTexture(string sceneName, int textureSize, Color unexploredColor, Color exploredColor)
+//    {
+//        Texture2D sceneTexture = new Texture2D(textureSize, textureSize, TextureFormat.RGBA32, false);
+//        Color[] scenePixels = new Color[textureSize * textureSize];
+
+//        // 모든 픽셀을 미탐험 상태로 초기화
+//        for (int i = 0; i < scenePixels.Length; i++)
+//        {
+//            scenePixels[i] = unexploredColor;
+//        }
+
+//        if (PlayerPrefs.HasKey($"FogData_{sceneName}"))
+//        {
+//            string json = PlayerPrefs.GetString($"FogData_{sceneName}");
+//            try
+//            {
+//                FogOfWarManager.FogData sceneFogData = JsonUtility.FromJson<FogOfWarManager.FogData>(json);
+
+//                if (sceneFogData.isExplored != null && sceneFogData.isExplored.Length == textureSize * textureSize)
+//                {
+//                    for (int i = 0; i < sceneFogData.isExplored.Length; i++)
+//                    {
+//                        if (sceneFogData.isExplored[i])
+//                        {
+//                            scenePixels[i] = exploredColor; // 탐험된 영역은 표시
+//                        }
+//                    }
+//                }
+//                else
+//                {
+//                    Debug.LogWarning($"[FogDataManager] 씬 '{sceneName}'의 안개 데이터 크기({sceneFogData.isExplored?.Length})가 예상({textureSize * textureSize})과 다릅니다. 개별 맵 로드에 실패했습니다.");
+//                }
+//            }
+//            catch (System.Exception e)
+//            {
+//                Debug.LogError($"[FogDataManager] 씬 '{sceneName}'의 안개 데이터 로드 실패 (JSON 파싱 오류): {e.Message}");
+//            }
+//        }
+
+//        sceneTexture.SetPixels(scenePixels);
+//        sceneTexture.Apply();
+//        return sceneTexture;
+//    }
+//}
+

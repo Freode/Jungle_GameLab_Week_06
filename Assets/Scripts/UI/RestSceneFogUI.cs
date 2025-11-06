@@ -18,6 +18,7 @@ public class RestSceneFogUI : MonoBehaviour
 
     void Awake()
     {
+        // _fogPanelContainer는 이 스크립트가 붙은 GameObject 자체일 수 있습니다.
         _fogPanelContainer = toggleUI;
     }
 
@@ -39,6 +40,11 @@ public class RestSceneFogUI : MonoBehaviour
             Debug.LogError("FogDataManager 인스턴스를 찾을 수 없습니다. RestSceneFogUI가 작동하지 않습니다.");
             return;
         }
+        if (MarkerManager.instance == null)
+        {
+            Debug.LogError("MarkerManager 인스턴스를 찾을 수 없습니다. 깃발 데이터를 불러올 수 없습니다.");
+            return;
+        }
 
         // 기존에 생성된 맵 엔트리들을 모두 제거
         foreach (Transform child in contentParent)
@@ -47,8 +53,13 @@ public class RestSceneFogUI : MonoBehaviour
         }
 
         // 각 씬의 안개 맵을 동적으로 생성하여 표시
-        foreach (string sceneName in FogDataManager.instance.foggedSceneNames)
+        for (int i = 0; i < FogDataManager.instance.foggedSceneNames.Count; i++)
         {
+            string sceneName = FogDataManager.instance.foggedSceneNames[i];
+            Texture2D worldMapPNG = (i < FogDataManager.instance.worldMapPNGs.Count) ? FogDataManager.instance.worldMapPNGs[i] : null;
+            Vector2 sceneWorldSize = (i < FogDataManager.instance.sceneWorldSizes.Count) ? FogDataManager.instance.sceneWorldSizes[i] : Vector2.zero;
+            List<MapMarkerData> markers = MarkerManager.instance.GetAllMarkersForScene(sceneName);
+
             // 개별 씬의 안개 맵 텍스처 가져오기
             Texture2D sceneFogTexture = FogDataManager.instance.GetIndividualExploredMapTexture(
                 sceneName,
@@ -63,7 +74,7 @@ public class RestSceneFogUI : MonoBehaviour
 
             if (entry != null)
             {
-                entry.Setup(sceneFogTexture, sceneName);
+                entry.Setup(sceneFogTexture, worldMapPNG, sceneName, markers, sceneWorldSize);
             }
             else
             {

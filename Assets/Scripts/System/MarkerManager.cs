@@ -67,6 +67,16 @@ public class MarkerManager : MonoBehaviour
         return new List<MapMarkerData>();
     }
 
+    // 특정 씬의 모든 마커 데이터를 반환하는 메서드
+    public List<MapMarkerData> GetAllMarkersForScene(string sceneName)
+    {
+        if (_allMarkers.ContainsKey(sceneName))
+        {
+            return _allMarkers[sceneName].markers;
+        }
+        return new List<MapMarkerData>();
+    }
+
     private void SaveMarkers()
     {
         var serialization = new Serialization<string, MapMarkerDataList>(_allMarkers);
