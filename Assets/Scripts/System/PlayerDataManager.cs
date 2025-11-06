@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDataManager : MonoBehaviour
 {
@@ -56,8 +57,8 @@ public class PlayerDataManager : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Debug.Log("플레이어 사망! (PlayerDataManager)");
-            // 게임 오버 처리 등 추가
+            currentHealth = maxHealth;
+            SceneManager.LoadScene("RestScene");
         }
     }
 
@@ -69,6 +70,13 @@ public class PlayerDataManager : MonoBehaviour
             yield return new WaitForSeconds(5f);
             currentEnergy = Mathf.Max(0, currentEnergy - 1);
             currentWater = Mathf.Max(0, currentWater - 1);
+
+            if (currentEnergy == 0)
+                currentHealth -= 1;
+
+            if (currentWater == 0)
+                currentWater -= 1;
+
             OnPlayerStatsChanged?.Invoke(); // 데이터 변경 알림
         }
     }
@@ -123,6 +131,26 @@ public class PlayerDataManager : MonoBehaviour
     }
     public void SetCurrentWater(int newWater)
     {
+        currentWater = Mathf.Clamp(newWater, 0, maxWater);
+        OnPlayerStatsChanged?.Invoke();
+    }
+
+    // --- 데이터 값 변화 메서드 --- //
+    public void IncreaseCurrentHealth(float amount)
+    {
+        float newHealth = currentHealth + amount;
+        currentHealth = Mathf.Clamp(newHealth, 0, maxHealth);
+        OnPlayerStatsChanged?.Invoke();
+    }
+    public void IncreaseCurrentEnergy(int amount)
+    {
+        int newEnergy = currentEnergy + amount; 
+        currentEnergy = Mathf.Clamp(newEnergy, 0, maxEnergy);
+        OnPlayerStatsChanged?.Invoke();
+    }
+    public void IncreaseCurrentWater(int amount)
+    {
+        int newWater = currentWater + amount;
         currentWater = Mathf.Clamp(newWater, 0, maxWater);
         OnPlayerStatsChanged?.Invoke();
     }

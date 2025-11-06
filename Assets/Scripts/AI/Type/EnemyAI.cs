@@ -54,6 +54,9 @@ public class EnemyAI : MonoBehaviour, IUnitWithFog, ITakeDamage
 
         // 모든 자식의 Mesh Renderer를 가져오기
         _renderers = gameObject.GetComponentsInChildren<MeshRenderer>();
+
+        // 시작할 때, 모든 메시 랜더러 끄기
+        OnMeshInactive();
     }
 
     void Update()
