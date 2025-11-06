@@ -18,6 +18,9 @@ public class PlayerMapController : MonoBehaviour
     {
         if (Input.GetKeyDown(mapToggleKey))
         {
+            if (worldMapUI == null)
+                return;
+
             if (worldMapUI.mapPanel.activeSelf)
             {
                 worldMapUI.CloseMap();

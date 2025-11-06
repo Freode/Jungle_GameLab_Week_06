@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldMapUI: {fileID: 0}
-  mapToggleKey: 109
+  mapToggleKey: 113
 --- !u!114 &8417042871973582930
 MonoBehaviour:
   m_ObjectHideFlags: 0
