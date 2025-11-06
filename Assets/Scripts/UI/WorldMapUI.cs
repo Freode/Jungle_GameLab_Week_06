@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class WorldMapUI : MonoBehaviour
@@ -9,6 +11,7 @@ public class WorldMapUI : MonoBehaviour
     public Image mapImage;
     public RectTransform playerIcon;
     public Transform playerTransform; // 실시간 위치 추적을 위한 플레이어 Transform
+    public TextMeshProUGUI textScene;   // Scene 이름 출력
 
     [Header("UI Panel")]
     public GameObject mapPanel;
@@ -58,6 +61,8 @@ public class WorldMapUI : MonoBehaviour
             Debug.LogError("SceneMapUI에 필요한 컴포넌트가 할당되지 않았습니다!");
             return;
         }
+
+        textScene.text = SceneManager.GetActiveScene().name;
 
         _mapMaterialInstance = Instantiate(mapImage.material);
         mapImage.material = _mapMaterialInstance;

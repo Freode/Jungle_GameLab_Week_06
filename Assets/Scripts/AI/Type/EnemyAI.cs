@@ -20,6 +20,7 @@ public class EnemyAI : MonoBehaviour, IUnitWithFog, ITakeDamage
     public float sightRange = 15f;
     [UnityEngine.Range(0, 360)] public float fieldOfViewAngle = 90f;
     public float chaseSpeed = 6f;
+    public float attackDamage = 10f; // 적의 공격력
 
     [Header("State Management")]
     public LayerMask whatIsPlayer;
@@ -48,6 +49,10 @@ public class EnemyAI : MonoBehaviour, IUnitWithFog, ITakeDamage
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null) player = playerObject.transform;
         else Debug.LogError("Player not found! Make sure your player has the 'Player' tag.");
+
+        WeaponStick weaponStick = GetComponentInChildren<WeaponStick>();
+        if(weaponStick != null)
+            weaponStick.SetDamage((int)attackDamage);
 
         // 초기 상태를 PatrolState로 설정
         stateMachine.Initialize(new PatrolState(this, stateMachine));

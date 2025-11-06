@@ -19,6 +19,7 @@ public class WeaponStick : MonoBehaviour
     private BoxCollider _boxCollider;
     private Coroutine _attackCoroutine;
     private List<ITakeDamage> _hitTargets = new List<ITakeDamage>();
+    private int _damage = 0;
 
     void Awake()
     {
@@ -94,18 +95,20 @@ public class WeaponStick : MonoBehaviour
 
         _hitTargets.Add(takeDamage);
 
-        int damage = 0;
         if (gameObject.layer == LayerMask.NameToLayer("Player"))
-            damage = PlayerDataManager.instance.GetAttackPower();
-        else
-            damage = 5;
+            _damage = PlayerDataManager.instance.GetAttackPower();
 
-        takeDamage.TakeDamage(gameObject, damage);
+        takeDamage.TakeDamage(gameObject, _damage);
     }
 
     public bool IsAttacking()
     {
         return _attackCoroutine != null;
+    }
+
+    public void SetDamage(int amount)
+    {
+        _damage = amount;
     }
 
 }

@@ -61,8 +61,6 @@ public class SceneMapEntry : MonoBehaviour
             float mapWidth = mapRectTransform.rect.width;
             float mapHeight = mapRectTransform.rect.height;
 
-            Debug.Log("Test : " + sceneWorldSize.x + ", " + sceneWorldSize.y);
-
             foreach (MapMarkerData markerData in markers)
             {
                 GameObject flagIconGO = Instantiate(flagIconPrefab, flagParent);

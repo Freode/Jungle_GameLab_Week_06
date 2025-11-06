@@ -253,8 +253,8 @@ public class FogOfWarManager : MonoBehaviour
             _meshFilter = _visibilityMeshObject.AddComponent<MeshFilter>();
             _meshRenderer = _visibilityMeshObject.AddComponent<MeshRenderer>();
 
-            // 메시에 사용할 머티리얼 설정 (중요)
-            _meshRenderer.material = new Material(Shader.Find("Unlit/Color"));
+            // 메시에 사용할 머티리al 설정 (중요)
+            _meshRenderer.material = new Material(Shader.Find("Universal Render Pipeline/Unlit"));
             _meshRenderer.material.color = Color.white;
             _meshRenderer.enabled = false;
 
