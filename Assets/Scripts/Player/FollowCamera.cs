@@ -3,15 +3,13 @@
 public class FollowCamera : MonoBehaviour
 {
 
-    public Transform player;        // 카메라를 따라갈 대상
+    public Transform player;                                // 카메라를 따라갈 대상
+    public Vector3 offset = new Vector3(0f, 20f, 0f);    // 카메라 오프셋
 
-    private Vector3 _offset;        // 카메라와 플레이어 사이의 초기 거리를 저장할 변수
-
-    void Start()
+    // 외부에서 플레이어 Transform을 설정할 수 있는 메서드
+    public void SetTarget(Transform newTarget)
     {
-        // 게임 시작 시, 카메라와 플레이어 사이의 거리를 계산하고 저장합니다.
-        // 이 오프셋(offset) 값 덕분에 에디터에서 설정한 카메라 위치가 그대로 유지됩니다.
-        _offset = transform.position - player.position;
+        player = newTarget;
     }
 
     // LateUpdate는 모든 Update() 호출이 끝난 후에 실행됩니다.
@@ -20,6 +18,9 @@ public class FollowCamera : MonoBehaviour
     void LateUpdate()
     {
         // 카메라의 위치를 (현재 플레이어 위치 + 처음 계산한 거리)로 계속 업데이트합니다.
-        transform.position = player.position + _offset;
+        if (player != null)
+        {
+            transform.position = player.position + offset;
+        }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class PlayerStateUI : MonoBehaviour
@@ -12,116 +11,65 @@ public class PlayerStateUI : MonoBehaviour
     public TextMeshProUGUI textAttack;
     public TextMeshProUGUI textRange;
 
-    public float maxHp;
-    public int maxEnergy;
-    public int maxWater;
-    public int maxAttack;
-    public float maxRange;
-
-    private int _curLevel;
-    private int _curExp;
-    private int _maxExp;
-    private float _curHp;
-    private float _maxHp;
-    private int _curEnergy;
-    private int _curWater;
-    private int _curAttack; 
-    private float _curRange;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _curLevel = 1;
-        _curExp = 0;
-        _maxExp = 30;
-        _curHp = maxHp;
-        _maxHp = maxHp;
-        _curEnergy = maxEnergy;
-        _curWater = maxWater;
-        _curAttack = maxAttack;
-        _curRange = maxRange;
+        // PlayerDataManager의 데이터 변경 이벤트 구독
+        if (PlayerDataManager.instance != null)
+        {
+            PlayerDataManager.instance.OnPlayerStatsChanged += PrintState;
+        }
+        // GameManager 이벤트 구독 해제 (이제 PlayerDataManager가 관리)
+        if (GameManager.instance != null)
+        {
+            // 기존 구독 해제 (GameManager가 PlayerDataManager의 변경을 구독하도록 변경 필요)
+            // GameManager.instance.OnHpChanged -= ChangeHp;
+            // GameManager.instance.OnExpAcquire -= AddExp;
+            // GameManager.instance.OnPlayerDamageGet -= GetDamage;
+        }
 
-        StartCoroutine(ReduceEnergyAndWater());
-        PrintState();
-
-        GameManager.instance.OnHpChanged += ChangeHp;
-        GameManager.instance.OnExpAcquire += AddExp;
-        GameManager.instance.OnPlayerDamageGet += GetDamage;
+        PrintState(); // 초기 상태 출력
     }
 
     private void OnDestroy()
     {
-        GameManager.instance.OnHpChanged -= ChangeHp;
-        GameManager.instance.OnExpAcquire -= AddExp;
-        GameManager.instance.OnPlayerDamageGet -= GetDamage;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    IEnumerator ReduceEnergyAndWater()
-    {
-        while(true)
+        // 오브젝트 파괴 시 이벤트 구독 해제
+        if (PlayerDataManager.instance != null)
         {
-            yield return new WaitForSeconds(5f);
-            --_curEnergy;
-            --_curWater;
-            PrintState();
+            PlayerDataManager.instance.OnPlayerStatsChanged -= PrintState;
         }
     }
 
+    // PlayerDataManager로부터 데이터를 가져와 UI에 출력
     void PrintState()
     {
-        textLevel.text = $"Lv : <color=#00FF00>{_curLevel}</color>";
-        textExp.text = $"Exp :  <color=#00FF00>{_curExp}</color>/{_maxExp}";
+        if (PlayerDataManager.instance == null) return;
 
-        textHp.text = $"HP : <color=#00FF00>{_curHp:F1}</color>/{_maxHp:F1}";
-        textEnergy.text = $"Energy :  <color=#00FF00>{_curEnergy}</color>/{maxEnergy}";
-        textWater.text = $"Water :  <color=#00FF00>{_curWater}</color>/{maxWater}";
-        textAttack.text = $"Attack :  <color=#00FF00>{_curAttack}</color>";
-        textRange.text = $"Range :  <color=#00FF00>{_curRange}</color>";
+        textLevel.text = $"Lv : <color=#00FF00>{PlayerDataManager.instance.GetCurrentLevel()}</color>";
+        textExp.text = $"Exp :  <color=#00FF00>{PlayerDataManager.instance.GetCurrentExp()}</color>/{PlayerDataManager.instance.GetMaxExp()}";
+
+        textHp.text = $"HP : <color=#00FF00>{PlayerDataManager.instance.GetCurrentHealth():F1}</color>/{PlayerDataManager.instance.GetMaxHealth():F1}";
+        textEnergy.text = $"Energy :  <color=#00FF00>{PlayerDataManager.instance.GetCurrentEnergy()}</color>/{PlayerDataManager.instance.GetMaxEnergy()}";
+        textWater.text = $"Water :  <color=#00FF00>{PlayerDataManager.instance.GetCurrentWater()}</color>/{PlayerDataManager.instance.GetMaxWater()}";
+        textAttack.text = $"Attack :  <color=#00FF00>{PlayerDataManager.instance.GetAttackPower()}</color>";
+        textRange.text = $"Range :  <color=#00FF00>{PlayerDataManager.instance.GetCurrentRange()}</color>";
     }
 
+    // 경험치 추가 (PlayerDataManager에 위임)
     public void AddExp(int amount)
     {
-        _curExp += amount;
-        PrintState();
-
-        if (_curExp >= _maxExp)
-            LevelUp();
+        if (PlayerDataManager.instance != null)
+        {
+            PlayerDataManager.instance.AddExp(amount);
+        }
     }
 
-    void LevelUp()
-    {
-        _curExp -= _maxExp;
-        _maxExp += 5;
-        ++_curLevel;
-        _curAttack += 3;
-        _curHp += 5;
-        _maxHp += 5;
-
-        PrintState();
-    }
-
-    void ChangeHp(float amount)
-    {
-        _curHp -= amount;
-        PrintState();
-
-        if (_curHp <= 0)
-            Die();
-    }
-
-    void Die()
-    {
-
-    }
-
+    // 공격력 가져오기 (PlayerDataManager에 위임)
     int GetDamage()
     {
-        return _curAttack;
+        if (PlayerDataManager.instance != null)
+        {
+            return (int)PlayerDataManager.instance.GetAttackPower();
+        }
+        return 0;
     }
 }

@@ -16,7 +16,7 @@ public class DieState : State<EnemyAI>
             renderer.material.color = Color.black;
 
         if (owner.player != null)
-            GameManager.instance.AnnounceExpAcquire(15);
+            PlayerDataManager.instance.AddExp(15);
 
         // 루팅 활성화
         owner.gameObject.TryGetComponent(out BaseInteract baseInteract);

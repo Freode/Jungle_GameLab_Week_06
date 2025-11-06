@@ -96,7 +96,7 @@ public class WeaponStick : MonoBehaviour
 
         int damage = 0;
         if (gameObject.layer == LayerMask.NameToLayer("Player"))
-            damage = GameManager.instance.GetPlayerDamage();
+            damage = PlayerDataManager.instance.GetAttackPower();
         else
             damage = 5;
 
