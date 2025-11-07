@@ -114,4 +114,12 @@ public class ObjectManager : MonoBehaviour
         }
         return null;
     }
+
+    public void DeleteAllObjects()
+    {
+        if (PlayerPrefs.HasKey(SAVE_KEY))
+        {
+            PlayerPrefs.DeleteKey(SAVE_KEY);
+        }
+    }
 }

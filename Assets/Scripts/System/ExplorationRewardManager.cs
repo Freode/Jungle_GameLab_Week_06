@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,6 +13,7 @@ public class RewardedMilestonesList
 public class ExplorationRewardManager : MonoBehaviour
 {
     public static ExplorationRewardManager instance;
+    public event Action<int> OnAnnounceReward;
 
     public int[] rewardMilestones = { 20, 40, 60, 80 }; // Percentage milestones for rewards
 
@@ -59,7 +61,7 @@ public class ExplorationRewardManager : MonoBehaviour
         // PlayerDataManager.instance.AddCurrency(100); // Assuming you have a PlayerDataManager
         // UIManager.instance.ShowNotification($"Explored {milestone}% of {sceneName}!");
         // ------------------------------------------------
-
+        OnAnnounceReward?.Invoke(milestone);
         PlayerDataManager.instance.IncreaseRecoverPlaceCount(1);
     }
 

@@ -41,6 +41,9 @@ public class DataResetter : MonoBehaviour
             }
         }
 
+        MarkerManager.instance.DeleteAllFlags();
+        ObjectManager.instance.DeleteAllObjects();
+
         PlayerPrefs.Save(); // 변경사항을 즉시 저장
         Debug.Log("모든 전장의 안개 데이터 삭제 완료 및 PlayerPrefs 저장.");
 

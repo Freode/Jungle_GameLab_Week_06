@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class PlayerStateUI : MonoBehaviour
@@ -11,6 +12,7 @@ public class PlayerStateUI : MonoBehaviour
     public TextMeshProUGUI textWater;
     public TextMeshProUGUI textAttack;
     public TextMeshProUGUI textRange;
+    public TextMeshProUGUI textAnnounce;
 
     void Start()
     {
@@ -28,6 +30,10 @@ public class PlayerStateUI : MonoBehaviour
             // GameManager.instance.OnExpAcquire -= AddExp;
             // GameManager.instance.OnPlayerDamageGet -= GetDamage;
         }
+        if(ExplorationRewardManager.instance != null)
+        {
+            ExplorationRewardManager.instance.OnAnnounceReward += PrintReward;
+        }
 
         PrintState(); // 초기 상태 출력
     }
@@ -39,6 +45,10 @@ public class PlayerStateUI : MonoBehaviour
         {
             PlayerDataManager.instance.OnPlayerStatsChanged -= PrintState;
             PlayerDataManager.instance.OnRecoverPlaceCountChanged -= PrintRemainCamp;
+        }
+        if (ExplorationRewardManager.instance != null)
+        {
+            ExplorationRewardManager.instance.OnAnnounceReward -= PrintReward;
         }
     }
 
@@ -80,5 +90,19 @@ public class PlayerStateUI : MonoBehaviour
             return (int)PlayerDataManager.instance.GetAttackPower();
         }
         return 0;
+    }
+
+    private void PrintReward(int percent)
+    {
+        textAnnounce.gameObject.SetActive(true);
+        textAnnounce.text = $"You have explored {percent.ToString("F2")}% above.\nYou’ve received 1 [Camp Item] as a reward.";
+        StartCoroutine(CoroutineReward());
+    }
+
+    IEnumerator CoroutineReward()
+    {
+        yield return new WaitForSeconds(10f);
+
+        textAnnounce.gameObject.SetActive(false);
     }
 }

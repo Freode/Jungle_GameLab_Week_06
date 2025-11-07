@@ -29,7 +29,7 @@ public class ChaseState : State<EnemyAI>
         }
 
         // 플레이어와 거리가 가까워지면, 공격을 시도합니다.
-        if(Vector3.Distance(owner.transform.position, owner.player.position) <= 1f)
+        if(Vector3.Distance(owner.transform.position, owner.player.position) <= 1.75f)
         {
             stateMachine.ChangeState(new AttackState(owner, stateMachine));
             return;

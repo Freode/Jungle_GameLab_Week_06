@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 // JsonUtility가 List<MapMarkerData>를 직접 처리하지 못하는 문제를 해결하기 위한 래퍼 클래스
@@ -134,6 +135,14 @@ public class MarkerManager : MonoBehaviour
                 foreach (MeshRenderer renderer in flagRenderer)
                     renderer.material.color = markerData.color;
             }
+        }
+    }
+
+    public void DeleteAllFlags()
+    {
+        if (PlayerPrefs.HasKey(SAVE_KEY))
+        {
+            PlayerPrefs.DeleteKey(SAVE_KEY);
         }
     }
 }
