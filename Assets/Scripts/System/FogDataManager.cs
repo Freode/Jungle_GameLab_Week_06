@@ -159,6 +159,38 @@ public class FogDataManager : MonoBehaviour
         sceneTexture.Apply();
         return sceneTexture;
     }
+
+    public float GetExplorationPercentage(string sceneName)
+    {
+        if (PlayerPrefs.HasKey($"FogData_{sceneName}"))
+        {
+            string json = PlayerPrefs.GetString($"FogData_{sceneName}");
+            try
+            {
+                FogOfWarManager.FogData sceneFogData = JsonUtility.FromJson<FogOfWarManager.FogData>(json);
+
+                if (sceneFogData.isExplored != null && sceneFogData.isExplored.Length > 0)
+                {
+                    int revealedPixelCount = 0;
+                    for (int i = 0; i < sceneFogData.isExplored.Length; i++)
+                    {
+                        if (sceneFogData.isExplored[i])
+                        {
+                            revealedPixelCount++;
+                        }
+                    }
+
+                    return (float)revealedPixelCount / sceneFogData.isExplored.Length * 100f;
+                }
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError($"[FogDataManager] Failed to load fog data for scene '{sceneName}' (JSON parsing error): {e.Message}");
+            }
+        }
+
+        return 0f;
+    }
 }
 
 //    /// <summary>

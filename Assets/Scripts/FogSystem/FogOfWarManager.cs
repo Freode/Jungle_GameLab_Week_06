@@ -16,7 +16,7 @@ public class FogOfWarManager : MonoBehaviour
     [Header("Fog Color")]
     // 안개 색상 정의
     public Color unexploredColor = Color.black;
-    public Color exploredColor = new Color(0.2f, 0.2f, 0.2f, 0.5f);
+    public Color exploredColor = Color.white;
     private readonly Color _visibleColor = new Color(0, 0, 0, 0); // 시야 안 (완전 투명)
 
     [Header("View Quality")]
@@ -42,6 +42,7 @@ public class FogOfWarManager : MonoBehaviour
     private RenderTexture _finalFogTexture;                         // 최종 결과물 렌더 텍스처
     private Color[] _exploredPixels;
     private bool[] _isExplored;
+    private int _exploredPixelCount = 0;
     private Queue<int> _updatePixels = new Queue<int>();            // 업데이트 된 픽셀 위치
 
     // 시야 영역을 그려주는 내부 mesh 변수
@@ -169,6 +170,7 @@ public class FogOfWarManager : MonoBehaviour
                 InitializeFogInternal(); // 내부 초기화 (텍스처, 배열 크기 등)
                 _exploredPixels = data.ToColorArray();
                 _isExplored = data.isExplored;
+                CalculateInitialExploredCount();
                 UpdateExploredStatusTextureOnGPU();
                 Debug.Log($"[FogOfWar] {sceneName}: 안개 데이터 불러옴. 픽셀 수: {_exploredPixels.Length}");
             }
@@ -207,6 +209,7 @@ public class FogOfWarManager : MonoBehaviour
 
     private void InitializeFogState()
     {
+        _exploredPixelCount = 0;
         // 모든 픽셀을 '미탐험' 상태로 초기화
         for (int i = 0; i < _exploredPixels.Length; i++)
         {
@@ -484,8 +487,13 @@ public class FogOfWarManager : MonoBehaviour
                 int index = y * textureSize + x;
 
 
+                if (!_isExplored[index])
+                {
+                    _exploredPixelCount++;
+                    _isExplored[index] = true;
+                }
+
                 _updatePixels.Enqueue(index);
-                _isExplored[index] = true;
                 _exploredPixels[index] = _visibleColor;
 
             }
@@ -523,6 +531,28 @@ public class FogOfWarManager : MonoBehaviour
     public Texture2D GetExploredMapTexture()
     {
         return _exploredStatusTexture;
+    }
+
+    public float GetExplorationPercentage()
+    {
+        if (_isExplored == null || _isExplored.Length == 0)
+        {
+            return 0f;
+        }
+        return (float)_exploredPixelCount / _isExplored.Length * 100f;
+    }
+
+    private void CalculateInitialExploredCount()
+    {
+        _exploredPixelCount = 0;
+        if (_isExplored == null) return;
+        for (int i = 0; i < _isExplored.Length; i++)
+        {
+            if (_isExplored[i])
+            {
+                _exploredPixelCount++;
+            }
+        }
     }
 
     // 씬 뷰에서 디버깅 정보를 시각적으로 그립니다. 게임 빌드에는 포함되지 않습니다.

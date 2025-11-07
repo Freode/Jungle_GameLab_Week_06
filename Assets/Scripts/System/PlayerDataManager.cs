@@ -75,7 +75,7 @@ public class PlayerDataManager : MonoBehaviour
                 currentHealth -= 1;
 
             if (currentWater == 0)
-                currentWater -= 1;
+                currentHealth -= 1;
 
             OnPlayerStatsChanged?.Invoke(); // 데이터 변경 알림
         }
@@ -99,7 +99,7 @@ public class PlayerDataManager : MonoBehaviour
         currentLevel++;
         attackPower += 3;
         maxHealth += 5;
-        currentHealth = maxHealth; // 레벨업 시 체력 회복
+        currentHealth += 5; // 레벨업 시 체력 회복
         
         OnPlayerStatsChanged?.Invoke(); // 데이터 변경 알림
     }

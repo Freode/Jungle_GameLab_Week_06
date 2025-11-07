@@ -8,6 +8,7 @@ public class SceneMapEntry : MonoBehaviour
     public RawImage worldMapImage; // 실제 월드맵 PNG를 표시할 RawImage
     public RawImage fogOverlayImage; // 안개 오버레이를 표시할 RawImage (fogTexture 할당)
     public TextMeshProUGUI sceneNameText;
+    public TextMeshProUGUI textPercent;
 
     public GameObject flagIconPrefab; // 깃발 아이콘 프리팹
     public RectTransform flagParent; // 깃발 아이콘들이 배치될 부모 Transform
@@ -22,7 +23,7 @@ public class SceneMapEntry : MonoBehaviour
     /// <param name="name">씬 이름</param>
     /// <param name="markers">씬의 깃발 데이터 목록</param>
     /// <param name="sceneWorldSize">씬의 월드 크기 (깃발 위치 변환용)</param>
-    public void Setup(Texture2D fogTexture, Texture2D worldMapPNG, string name, List<MapMarkerData> markers, Vector2 sceneWorldSize)
+    public void Setup(Texture2D fogTexture, Texture2D worldMapPNG, string name, List<MapMarkerData> markers, Vector2 sceneWorldSize, float percent)
     {
         // 기존 깃발 제거
         foreach (GameObject flag in _instantiatedFlags)
@@ -94,5 +95,7 @@ public class SceneMapEntry : MonoBehaviour
                 }
             }
         }
+
+        textPercent.text = $"<color=#00FF00>{percent.ToString("F2")}%</color>";
     }
 }

@@ -133,27 +133,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -343,27 +347,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -553,27 +561,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -655,27 +667,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -757,27 +773,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -967,27 +987,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -1197,27 +1221,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -1299,27 +1327,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -1401,27 +1433,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -1868,27 +1904,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -2402,27 +2442,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -3034,27 +3078,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -3136,27 +3184,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -3269,27 +3321,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -3496,27 +3552,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -3706,27 +3766,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -4039,27 +4103,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -4220,27 +4288,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -4380,27 +4452,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -4590,27 +4666,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -4692,27 +4772,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -4794,27 +4878,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -5165,27 +5253,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -5388,27 +5480,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -5598,27 +5694,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -5700,27 +5800,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -5802,27 +5906,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -6210,27 +6318,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -6867,27 +6979,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -6969,27 +7085,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -7066,27 +7186,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -7346,27 +7470,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -7664,27 +7792,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -7874,27 +8006,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -8084,27 +8220,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -8575,27 +8715,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -8785,27 +8929,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -9550,27 +9698,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -9863,27 +10015,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -10073,27 +10229,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -10170,27 +10330,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -10429,27 +10593,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -10692,27 +10860,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -10794,27 +10966,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -11131,27 +11307,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -11511,27 +11691,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -11937,27 +12121,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -12147,27 +12335,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -12629,27 +12821,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -12839,27 +13035,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -13296,27 +13496,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -13609,27 +13813,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -14050,27 +14258,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -14383,27 +14595,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -14809,27 +15025,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -15072,27 +15292,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -15282,27 +15506,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -15703,27 +15931,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -16144,27 +16376,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -16542,27 +16778,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -16747,27 +16987,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -16957,27 +17201,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -17290,27 +17538,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -17824,27 +18076,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -18034,27 +18290,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -18612,27 +18872,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -19900,27 +20164,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -20867,27 +21135,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -21185,27 +21457,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -22300,27 +22576,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -22633,27 +22913,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle
@@ -22735,27 +23019,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolHp
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: chaseSpeed
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: sightRange
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: patrolRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolWaitTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: fieldOfViewAngle

@@ -132,8 +132,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -326,8 +334,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -520,8 +536,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -606,8 +630,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -692,8 +724,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -886,8 +926,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -1100,8 +1148,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -1186,8 +1242,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -1272,8 +1336,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -1723,8 +1795,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -2241,8 +2321,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -2373,6 +2461,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7511469592620745903, guid: 5c4066365895269499bed51592dda7a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 199799181}
+    - targetCorrespondingSourceObject: {fileID: 5373689487370486647, guid: 5c4066365895269499bed51592dda7a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5c4066365895269499bed51592dda7a8, type: 3}
 --- !u!4 &199799179 stripped
 Transform:
@@ -2597,6 +2688,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7511469592620745903, guid: 5c4066365895269499bed51592dda7a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 215424482}
+    - targetCorrespondingSourceObject: {fileID: 5373689487370486647, guid: 5c4066365895269499bed51592dda7a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5c4066365895269499bed51592dda7a8, type: 3}
 --- !u!4 &215424480 stripped
 Transform:
@@ -2857,8 +2951,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -2943,8 +3045,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -3060,8 +3170,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -3146,8 +3264,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -3340,8 +3466,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -3657,8 +3791,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -3822,8 +3964,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -3966,8 +4116,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -4160,8 +4318,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -4246,8 +4412,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -4332,8 +4506,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -4687,8 +4869,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -4894,8 +5084,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -5088,8 +5286,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -5174,8 +5380,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -5260,8 +5474,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -5608,6 +5830,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7511469592620745903, guid: 5c4066365895269499bed51592dda7a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 466412040}
+    - targetCorrespondingSourceObject: {fileID: 5373689487370486647, guid: 5c4066365895269499bed51592dda7a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5c4066365895269499bed51592dda7a8, type: 3}
 --- !u!4 &466412038 stripped
 Transform:
@@ -5652,8 +5877,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -6293,8 +6526,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -6379,8 +6620,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -6460,8 +6709,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -6724,8 +6981,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -7026,8 +7291,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -7220,8 +7493,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -7414,8 +7695,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -7889,8 +8178,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -8083,8 +8380,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -8832,8 +9137,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -9129,8 +9442,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -9323,8 +9644,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -9404,8 +9733,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -9647,8 +9984,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -9894,8 +10239,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -9996,8 +10349,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -10317,8 +10678,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -10681,8 +11050,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -11091,8 +11468,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -11285,8 +11670,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -11751,8 +12144,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -11945,8 +12346,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -12386,8 +12795,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -12683,8 +13100,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -13108,8 +13533,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -13425,8 +13858,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -13835,8 +14276,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -14082,8 +14531,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -14276,8 +14733,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -14681,8 +15146,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -15106,8 +15579,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -15341,6 +15822,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7511469592620745903, guid: 5c4066365895269499bed51592dda7a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1432777754}
+    - targetCorrespondingSourceObject: {fileID: 5373689487370486647, guid: 5c4066365895269499bed51592dda7a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5c4066365895269499bed51592dda7a8, type: 3}
 --- !u!4 &1432777752 stripped
 Transform:
@@ -15488,8 +15972,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -15677,8 +16169,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -15871,8 +16371,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -16188,8 +16696,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -16706,8 +17222,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -16900,8 +17424,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -17462,8 +17994,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -18734,8 +19274,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -19685,8 +20233,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -19987,8 +20543,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -20939,6 +21503,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7511469592620745903, guid: 5c4066365895269499bed51592dda7a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2007844688}
+    - targetCorrespondingSourceObject: {fileID: 5373689487370486647, guid: 5c4066365895269499bed51592dda7a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5c4066365895269499bed51592dda7a8, type: 3}
 --- !u!4 &2007844686 stripped
 Transform:
@@ -21086,8 +21653,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -21403,8 +21978,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -21489,8 +22072,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
-      propertyPath: sightRange
+      propertyPath: chaseSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
+      propertyPath: patrolSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1024073605085684700, guid: 7b48c1f2fd04f1a4d97034ccfcb8544d, type: 3}
       propertyPath: attackDamage
@@ -21976,6 +22567,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7511469592620745903, guid: 5c4066365895269499bed51592dda7a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 963621538}
+    - targetCorrespondingSourceObject: {fileID: 5373689487370486647, guid: 5c4066365895269499bed51592dda7a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5c4066365895269499bed51592dda7a8, type: 3}
 --- !u!1001 &6789794463069396866
 PrefabInstance:

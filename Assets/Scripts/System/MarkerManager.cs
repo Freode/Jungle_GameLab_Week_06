@@ -42,10 +42,10 @@ public class MarkerManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    public void AddMarker(Vector3 position, string text)
+    public void AddMarker(Vector3 position, string text, Color color)
     {
         string currentScene = SceneManager.GetActiveScene().name;
-        MapMarkerData newMarker = new MapMarkerData { position = position, text = text };
+        MapMarkerData newMarker = new MapMarkerData { position = position, text = text, color = color };
 
         if (!_allMarkers.ContainsKey(currentScene))
         {
@@ -126,7 +126,14 @@ public class MarkerManager : MonoBehaviour
         List<MapMarkerData> currentSceneMarkers = GetMarkersForCurrentScene();
         foreach (var markerData in currentSceneMarkers)
         {
-            Instantiate(flagPrefab, markerData.position, Quaternion.identity);
+            GameObject flag = Instantiate(flagPrefab, markerData.position, Quaternion.identity);
+
+            MeshRenderer[] flagRenderer = flag.GetComponentsInChildren<MeshRenderer>();
+            if (flagRenderer != null)
+            {
+                foreach (MeshRenderer renderer in flagRenderer)
+                    renderer.material.color = markerData.color;
+            }
         }
     }
 }

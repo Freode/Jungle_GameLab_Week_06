@@ -59,6 +59,7 @@ public class RestSceneFogUI : MonoBehaviour
             Texture2D worldMapPNG = (i < FogDataManager.instance.worldMapPNGs.Count) ? FogDataManager.instance.worldMapPNGs[i] : null;
             Vector2 sceneWorldSize = (i < FogDataManager.instance.sceneWorldSizes.Count) ? FogDataManager.instance.sceneWorldSizes[i] : Vector2.zero;
             List<MapMarkerData> markers = MarkerManager.instance.GetAllMarkersForScene(sceneName);
+            float percent = FogDataManager.instance.GetExplorationPercentage(sceneName);
 
             // 개별 씬의 안개 맵 텍스처 가져오기
             Texture2D sceneFogTexture = FogDataManager.instance.GetIndividualExploredMapTexture(
@@ -74,7 +75,7 @@ public class RestSceneFogUI : MonoBehaviour
 
             if (entry != null)
             {
-                entry.Setup(sceneFogTexture, worldMapPNG, sceneName, markers, sceneWorldSize);
+                entry.Setup(sceneFogTexture, worldMapPNG, sceneName, markers, sceneWorldSize, percent);
             }
             else
             {

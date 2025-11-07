@@ -8,10 +8,7 @@ public class PlayerMapController : MonoBehaviour
     void Start()
     {
         // 맵 UI에 플레이어 자신의 Transform 정보를 넘겨줌
-        if (worldMapUI != null)
-        {
-            worldMapUI.playerTransform = this.transform;
-        }
+        // worldMapUI.playerTransform은 인스펙터에서 수동으로 할당됩니다.
     }
 
     void Update()

@@ -6,15 +6,24 @@ using UnityEngine.UI;
 
 public class WorldMapUI : MonoBehaviour
 {
-    [Header("Required Components")]
-    public FogOfWarManager fogManager;
+    [Header("World Map Components")]
+    public GameObject mapPanel;
     public Image mapImage;
     public RectTransform playerIcon;
-    public Transform playerTransform; // 실시간 위치 추적을 위한 플레이어 Transform
-    public TextMeshProUGUI textScene;   // Scene 이름 출력
+    public Transform markerParent;
 
-    [Header("UI Panel")]
-    public GameObject mapPanel;
+    [Header("Minimap Components")]
+    public GameObject minimapPanel;
+    public Image minimapImage;
+    public RectTransform minimapPlayerIcon;
+    public Transform minimapMarkerParent;
+
+    [Header("Common Components")]
+    public FogOfWarManager fogManager;
+    public Transform playerTransform;
+    public TextMeshProUGUI textScene;
+    public GameObject markerPrefab;
+    public TextMeshProUGUI explorationPercentageText;
 
     [Header("Map Bounds Setup")]
     [Tooltip("맵의 왼쪽 아래 모서리에 위치시킬 오브젝트")]
@@ -22,27 +31,26 @@ public class WorldMapUI : MonoBehaviour
     [Tooltip("맵의 오른쪽 위 모서리에 위치시킬 오브젝트")]
     public Transform worldBounds_TopRight;
 
-    [Header("Map Markers")]
-    public GameObject markerPrefab;
-    public Transform markerParent;
-
     private Material _mapMaterialInstance;
+    private Material _minimapMaterialInstance;
     private List<GameObject> _activeMarkers = new List<GameObject>();
+    private List<GameObject> _activeMinimapMarkers = new List<GameObject>();
     private Rect _mapWorldBounds;
 
     void OnEnable()
     {
-        MarkerManager.OnMarkerAdded += UpdateMarkers; // 마커 추가 이벤트 구독
+        MarkerManager.OnMarkerAdded += UpdateAllMarkers; // 마커 추가 이벤트 구독
     }
 
     void OnDisable()
     {
-        MarkerManager.OnMarkerAdded -= UpdateMarkers; // 마커 추가 이벤트 구독 해제
+        MarkerManager.OnMarkerAdded -= UpdateAllMarkers; // 마커 추가 이벤트 구독 해제
     }
 
     void Awake()
     {
-        // 기준점 오브젝트로부터 월드 경계를 자동으로 계산
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
         if (worldBounds_BottomLeft != null && worldBounds_TopRight != null)
         {
             _mapWorldBounds = new Rect(
@@ -56,93 +64,136 @@ public class WorldMapUI : MonoBehaviour
 
     void Start()
     {
-        if (mapImage == null || fogManager == null)
+        if (mapImage == null || minimapImage == null || fogManager == null)
         {
-            Debug.LogError("SceneMapUI에 필요한 컴포넌트가 할당되지 않았습니다!");
+            Debug.LogError("WorldMapUI에 필요한 컴포넌트가 할당되지 않았습니다!");
             return;
         }
 
         textScene.text = SceneManager.GetActiveScene().name;
 
+        // Create separate material instances for the world map and minimap
         _mapMaterialInstance = Instantiate(mapImage.material);
         mapImage.material = _mapMaterialInstance;
+
+        _minimapMaterialInstance = Instantiate(minimapImage.material);
+        minimapImage.material = _minimapMaterialInstance;
 
         Texture fogTexture = fogManager.GetExploredMapTexture();
         if (fogTexture != null)
         {
             _mapMaterialInstance.SetTexture("_FogTex", fogTexture);
+            _minimapMaterialInstance.SetTexture("_FogTex", fogTexture);
+        }
+
+        minimapPanel.SetActive(true);
+        mapPanel.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (playerTransform == null) return;
+
+        // Always update the minimap
+        UpdateMinimap();
+
+        // Only update the world map if it's active
+        if (mapPanel.activeSelf)
+        {
+            UpdateWorldMap();
+        }
+
+        if (fogManager != null && explorationPercentageText != null)
+        {
+            float percentage = fogManager.GetExplorationPercentage();
+            explorationPercentageText.text = $"Explored: <color=#00FF00>{percentage:F2}%</color>";
         }
     }
 
-    // 실시간 업데이트를 위한 Update 함수 추가
-    void Update()
+    void UpdateWorldMap()
     {
-        // 맵 패널이 활성화되어 있을 때만 플레이어 아이콘 위치를 계속 업데이트
-        if (mapPanel.activeSelf && playerTransform != null)
-        {
-            UpdatePlayerIcon(playerTransform.position);
-        }
+        // World map logic: player icon moves, map is static
+        SetIconPosition(playerIcon, playerTransform.position, mapImage.rectTransform);
+        UpdateMarkers(markerParent, ref _activeMarkers, false);
+    }
+
+    void UpdateMinimap()
+    {
+        // Minimap logic: map moves, player icon is static in the center of the mask
+        RectTransform minimapImageRect = minimapImage.rectTransform;
+
+        float normalizedX = (playerTransform.position.x - _mapWorldBounds.x) / _mapWorldBounds.width;
+        float normalizedY = (playerTransform.position.z - _mapWorldBounds.y) / _mapWorldBounds.height;
+
+        // This calculation assumes the minimapImage has a center pivot (0.5, 0.5).
+        // It moves the map so the player's normalized position on the map is at the center of the panel.
+        float newX = -(normalizedX - 0.5f) * minimapImageRect.rect.width;
+        float newY = -(normalizedY - 0.5f) * minimapImageRect.rect.height;
+
+        minimapImage.rectTransform.anchoredPosition = new Vector2(newX, newY);
+
+        UpdateMarkers(minimapMarkerParent, ref _activeMinimapMarkers, true);
     }
 
     public void OpenMap()
     {
         mapPanel.SetActive(true);
-        if (playerTransform != null) UpdatePlayerIcon(playerTransform.position);
-        UpdateMarkers();
+        minimapPanel.SetActive(false);
+        UpdateWorldMap();
     }
 
     public void CloseMap()
     {
         mapPanel.SetActive(false);
+        minimapPanel.SetActive(true);
     }
 
-    private void UpdatePlayerIcon(Vector3 playerWorldPosition)
+    void UpdateAllMarkers()
     {
-        if (playerIcon == null) return;
-        SetIconPosition(playerIcon, playerWorldPosition);
-        playerIcon.gameObject.SetActive(true);
+        UpdateMarkers(markerParent, ref _activeMarkers, false);
+        UpdateMarkers(minimapMarkerParent, ref _activeMinimapMarkers, true);
     }
 
-    private void UpdateMarkers()
+    void UpdateMarkers(Transform parent, ref List<GameObject> activeMarkers, bool isMinimap)
     {
-        foreach (var marker in _activeMarkers)
+        foreach (var marker in activeMarkers)
         {
             Destroy(marker);
         }
-        _activeMarkers.Clear();
+        activeMarkers.Clear();
 
-        if (MarkerManager.instance == null || markerPrefab == null || markerParent == null) return;
+        if (MarkerManager.instance == null || markerPrefab == null || parent == null) return;
 
         List<MapMarkerData> markers = MarkerManager.instance.GetMarkersForCurrentScene();
 
         foreach (var markerData in markers)
         {
-            GameObject markerGO = Instantiate(markerPrefab, markerParent);
+            GameObject markerGO = Instantiate(markerPrefab, parent);
             UI_MapMarker markerUI = markerGO.GetComponent<UI_MapMarker>();
-            if (markerUI != null) markerUI.SetText(markerData.text);
+            if (markerUI != null)
+            {
+                markerUI.SetText(markerData.text);
+                markerUI.SetColor(markerData.color);
+            }
 
-            // [디버그] 로드된 위치 좌표를 정확히 기록
-            Debug.Log($"[LOAD] 깃발 아이콘 생성 시도. 저장된 위치: {markerData.position.ToString("F4")}");
-
-            SetIconPosition(markerGO.GetComponent<RectTransform>(), markerData.position);
-            _activeMarkers.Add(markerGO);
+            SetIconPosition(markerGO.GetComponent<RectTransform>(), markerData.position, isMinimap ? minimapImage.rectTransform : mapImage.rectTransform);
+            activeMarkers.Add(markerGO);
         }
     }
 
-    private void SetIconPosition(RectTransform iconRect, Vector3 worldPosition)
+    void SetIconPosition(RectTransform iconRect, Vector3 worldPosition, RectTransform mapRect)
     {
+        // This logic calculates the marker's position on its parent map texture.
+        // It requires the marker parent to be a child of the map image.
         float normalizedX = (worldPosition.x - _mapWorldBounds.x) / _mapWorldBounds.width;
         float normalizedY = (worldPosition.z - _mapWorldBounds.y) / _mapWorldBounds.height;
 
-        // Set anchors to bottom-left for direct anchoredPosition calculation
         iconRect.anchorMin = Vector2.zero;
         iconRect.anchorMax = Vector2.zero;
 
-        // Calculate position relative to the map panel's bottom-left corner
-        RectTransform mapRect = mapImage.rectTransform;
         float newX = normalizedX * mapRect.rect.width;
         float newY = normalizedY * mapRect.rect.height;
-        
+
         iconRect.anchoredPosition = new Vector2(newX, newY);
     }
 }

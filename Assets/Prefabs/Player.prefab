@@ -261,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flagPrefab: {fileID: 2401085177399302747, guid: f9e3b00ff91c2864e987c7033dc1ab1e, type: 3}
   placeFlagKey: 102
+  flagCustomizationUI: {fileID: 0}
 --- !u!1 &5854716658302268303
 GameObject:
   m_ObjectHideFlags: 0
