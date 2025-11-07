@@ -49,8 +49,6 @@ public class WorldMapUI : MonoBehaviour
 
     void Awake()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
         if (worldBounds_BottomLeft != null && worldBounds_TopRight != null)
         {
             _mapWorldBounds = new Rect(
@@ -64,6 +62,8 @@ public class WorldMapUI : MonoBehaviour
 
     void Start()
     {
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
         if (mapImage == null || minimapImage == null || fogManager == null)
         {
             Debug.LogError("WorldMapUI에 필요한 컴포넌트가 할당되지 않았습니다!");

@@ -333,9 +333,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ae3008d39145046aabaa7d67f2b568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cubeGameObject: {fileID: 6367090435987365652}
   sceneToLoad: SampleScene
   playerTag: Player
   textStage: {fileID: 7298500130234202759}
+  isLoadActive: 1
 --- !u!65 &2997922069938742881
 BoxCollider:
   m_ObjectHideFlags: 0
