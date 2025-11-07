@@ -107,6 +107,12 @@ public class WorldMapUI : MonoBehaviour
         {
             float percentage = fogManager.GetExplorationPercentage();
             explorationPercentageText.text = $"Explored: <color=#00FF00>{percentage:F2}%</color>";
+
+            // Check for exploration rewards
+            if (ExplorationRewardManager.instance != null)
+            {
+                ExplorationRewardManager.instance.CheckAndGiveRewards(SceneManager.GetActiveScene().name, percentage);
+            }
         }
     }
 

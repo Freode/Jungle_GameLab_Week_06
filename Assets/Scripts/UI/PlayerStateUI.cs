@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerStateUI : MonoBehaviour
 {
+    public TextMeshProUGUI textRemainCamp;
     public TextMeshProUGUI textLevel;
     public TextMeshProUGUI textExp;
     public TextMeshProUGUI textHp;
@@ -17,6 +18,7 @@ public class PlayerStateUI : MonoBehaviour
         if (PlayerDataManager.instance != null)
         {
             PlayerDataManager.instance.OnPlayerStatsChanged += PrintState;
+            PlayerDataManager.instance.OnRecoverPlaceCountChanged += PrintRemainCamp;
         }
         // GameManager 이벤트 구독 해제 (이제 PlayerDataManager가 관리)
         if (GameManager.instance != null)
@@ -36,6 +38,7 @@ public class PlayerStateUI : MonoBehaviour
         if (PlayerDataManager.instance != null)
         {
             PlayerDataManager.instance.OnPlayerStatsChanged -= PrintState;
+            PlayerDataManager.instance.OnRecoverPlaceCountChanged -= PrintRemainCamp;
         }
     }
 
@@ -52,6 +55,12 @@ public class PlayerStateUI : MonoBehaviour
         textWater.text = $"Water :  <color=#00FF00>{PlayerDataManager.instance.GetCurrentWater()}</color>/{PlayerDataManager.instance.GetMaxWater()}";
         textAttack.text = $"Attack :  <color=#00FF00>{PlayerDataManager.instance.GetAttackPower()}</color>";
         textRange.text = $"Range :  <color=#00FF00>{PlayerDataManager.instance.GetCurrentRange()}</color>";
+    }
+
+    private void PrintRemainCamp()
+    {
+        int count = PlayerDataManager.instance.GetRecoverPlaceCount();
+        textRemainCamp.text = $"<color=#00FF00>E</color> - Remain Camp : <color=#00FF00>{count}</color>";
     }
 
     // 경험치 추가 (PlayerDataManager에 위임)

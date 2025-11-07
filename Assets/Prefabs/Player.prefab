@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 8810102771880903266}
   - component: {fileID: 2270309546019023219}
   - component: {fileID: 8417042871973582930}
+  - component: {fileID: 3602785478156429130}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -261,7 +262,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flagPrefab: {fileID: 2401085177399302747, guid: f9e3b00ff91c2864e987c7033dc1ab1e, type: 3}
   placeFlagKey: 102
-  flagCustomizationUI: {fileID: 0}
+--- !u!114 &3602785478156429130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3161938037122749636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc8e91261778d14a9126744bcb0d37a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToPlace: {fileID: 2864093924011168017, guid: dd79f294032814045bb0c08c9fb8bc72, type: 3}
+  placeObjectKey: 101
+  isMarkAddition: 1
+  markText: Tmp Camp
+  markColor: {r: 0, g: 1, b: 0.07561898, a: 1}
 --- !u!1 &5854716658302268303
 GameObject:
   m_ObjectHideFlags: 0

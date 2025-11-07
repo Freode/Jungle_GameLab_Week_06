@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -24,8 +25,11 @@ public class PlayerDataManager : MonoBehaviour
     public float maxRange = 10f;
     public float currentRange;
 
+    public int _recoverPlaceCount = 0;
+
     // 데이터 변경을 알리는 이벤트
     public event System.Action OnPlayerStatsChanged;
+    public event Action OnRecoverPlaceCountChanged;
 
     void Awake()
     {
@@ -117,6 +121,7 @@ public class PlayerDataManager : MonoBehaviour
     public int GetMaxWater() { return maxWater; }
     public float GetCurrentRange() { return currentRange; }
     public float GetMaxRange() { return maxRange; }
+    public int GetRecoverPlaceCount() { return _recoverPlaceCount;}
 
     // --- 데이터 설정 메서드 (필요하다면) --- //
     public void SetCurrentHealth(float newHealth)
@@ -153,6 +158,13 @@ public class PlayerDataManager : MonoBehaviour
         int newWater = currentWater + amount;
         currentWater = Mathf.Clamp(newWater, 0, maxWater);
         OnPlayerStatsChanged?.Invoke();
+    }
+    
+    public void IncreaseRecoverPlaceCount(int amount)
+    {
+        int newCount = _recoverPlaceCount + amount;
+        _recoverPlaceCount = Mathf.Max(0, newCount);
+        OnRecoverPlaceCountChanged?.Invoke();
     }
 }
 
