@@ -3,6 +3,7 @@ using UnityEngine;
 public class ItemBox : BaseInteract, IInteract
 {
     public GameObject useIcon;
+    public bool isDebugMode = false;
 
     [SerializeField]
     private LootTable lootTable;
@@ -14,8 +15,26 @@ public class ItemBox : BaseInteract, IInteract
 
     // BaseInteract already implements IInteract.
     // We provide a new implementation for OnClick for this specific class.
+    void Awake()
+    {
+        OnCheck += IsChecking;
+    }
+
+    void OnDestroy()
+    {
+        OnCheck -= IsChecking;
+    }
+
     void IInteract.OnClick()
     {
+        // µð¹ö±ë ¸ðµå
+        if(isDebugMode)
+        {
+            ItemData debugChosenItem = lootTable.GetRandomItem();
+            ItemManager.instance.ApplyItemEffect(debugChosenItem);
+            return;
+        }
+
         if (_canInteract == false) return;
 
         if (_isUsed) return;
@@ -48,5 +67,10 @@ public class ItemBox : BaseInteract, IInteract
             _isUsed = true;
             // You could add cooldown logic here, e.g., disabling the collider for a while.
         }
+    }
+
+    bool IsChecking()
+    {
+        return (isDebugMode || _isUsed == false);
     }
 }

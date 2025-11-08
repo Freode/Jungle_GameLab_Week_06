@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class BaseInteract : MonoBehaviour, IInteract
 {
     // 외곽선 활성화할 객체
     public List<GameObject> outlineObjects;
+    public event Func<bool> OnCheck;
 
+    public GameObject interactUI;
     protected bool _canInteract = false;
 
     void Start()
@@ -20,8 +23,13 @@ public class BaseInteract : MonoBehaviour, IInteract
 
     void IInteract.OnHoverEnter()
     {
+        if (OnCheck != null && OnCheck.Invoke() == false)
+            return;
+
         if (_canInteract)
         {
+            interactUI.gameObject.SetActive(true);
+
             foreach (GameObject outlineObject in outlineObjects)
                 outlineObject.layer = LayerMask.NameToLayer("Outline");
         }
@@ -29,13 +37,18 @@ public class BaseInteract : MonoBehaviour, IInteract
 
     void IInteract.OnHoverExit()
     {
+        interactUI.gameObject.SetActive(false);
+
         foreach (GameObject outlineObject in outlineObjects)
             outlineObject.layer = LayerMask.NameToLayer("Interact");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("PlayerInteractBoundary"))
+        if (OnCheck != null && OnCheck.Invoke() == false)
+            return;
+
+        if (other.gameObject.CompareTag("PlayerInteractBoundary"))
         {
             _canInteract = true;
             ((IInteract)this).OnHoverEnter();

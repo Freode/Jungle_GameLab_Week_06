@@ -33,6 +33,7 @@ Transform:
   m_Children:
   - {fileID: 8471364471787912966}
   - {fileID: 1015181179686682469}
+  - {fileID: 9127156843215448024}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &8216319324406114835
@@ -70,7 +71,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineObjects:
   - {fileID: 6475549644101585101}
+  interactUI: {fileID: 8922384301121657161}
   useIcon: {fileID: 3472895122081041427}
+  isDebugMode: 0
   lootTable: {fileID: 11400000, guid: 190152b900e14b947855a772e561c515, type: 2}
   destroyOnUse: 0
 --- !u!1 &3472895122081041427
@@ -290,3 +293,98 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &1012976071384916835
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5584905147133664164}
+    m_Modifications:
+    - target: {fileID: 1117990519899824131, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_text
+      value: <color=#00FF00>L Click</color>\n<color=#000000>Interact</color>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1117990519899824131, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8492800854846257706, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_Name
+      value: InteractAnnounceUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8492800854846257706, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+--- !u!1 &8922384301121657161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8492800854846257706, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+  m_PrefabInstance: {fileID: 1012976071384916835}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9127156843215448024 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8116890142053991611, guid: 6d981f45bf6d1344a8b455fcd7d38c69, type: 3}
+  m_PrefabInstance: {fileID: 1012976071384916835}
+  m_PrefabAsset: {fileID: 0}

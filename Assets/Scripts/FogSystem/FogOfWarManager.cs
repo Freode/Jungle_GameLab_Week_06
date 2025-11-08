@@ -25,6 +25,7 @@ public class FogOfWarManager : MonoBehaviour
     public float rayCircleMaxDistance = 20f;    // 원형 시야 레이캐스트 최대 거리
     public float rayForwardMaxDistance = 40f;   // 전방 시야 레이캐스트 최대 거리 (캐릭터 시야 반경보다 충분히 길게)
     public float rayRotateRange = 360f;         // 레이캐스트 회전 최대 각도
+    public float visionAngleBonus = 0f;    // 버프 등을 위한 시야각 보너스 (덧셈)
 
     [Header("Render Textures")]
     public RenderTexture visibilityRenderTexture;   // 가시성 메시를 그릴 렌더 텍스처
@@ -44,6 +45,8 @@ public class FogOfWarManager : MonoBehaviour
     private bool[] _isExplored;
     private int _exploredPixelCount = 0;
     private Queue<int> _updatePixels = new Queue<int>();            // 업데이트 된 픽셀 위치
+    private List<int> _newlyExploredPixelIndices = new List<int>(); // NEW: Track newly explored pixels
+    private List<int> _pixelsToCommitOnSceneEnd = new List<int>(); // NEW: Pixels to commit when scene ends
 
     // 시야 영역을 그려주는 내부 mesh 변수
     private GameObject _visibilityMeshObject;
@@ -134,17 +137,19 @@ public class FogOfWarManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // 씬 로드 시 안개 데이터 불러오기
+        _newlyExploredPixelIndices.Clear(); // NEW: Clear on scene load
         LoadFogData(scene.name);
-        // 코루틴 시작
         StartCoroutine(UpdateFogCoroutine());
     }
 
     private void OnSceneUnloaded(Scene scene)
     {
-        // 씬 언로드 시 코루틴만 정지. 저장은 CommitFogData()를 통해 수동으로 이루어집니다.
         StopAllCoroutines();
-        Debug.Log($"[FogOfWar] {scene.name}: Scene unloaded. Fog update coroutine stopped.");
+        // 씬 언로드 시 지연된 안개 데이터를 저장합니다.
+        // commitAll은 PlayerDataManager 등 외부에서 설정되어야 합니다 (예: 게임 클리어 여부).
+        // 현재는 기본값 false로 호출합니다.
+        CommitDeferredFogData(false); // Assuming not a game clear by default
+        Debug.Log($"[FogOfWar] {scene.name}: Scene unloaded. Fog update coroutine stopped and deferred data committed.");
     }
 
     /// <summary>
@@ -153,6 +158,104 @@ public class FogOfWarManager : MonoBehaviour
     public void CommitFogData()
     {
         SaveFogData(SceneManager.GetActiveScene().name);
+        _newlyExploredPixelIndices.Clear(); // NEW: Clear after full commit
+    }
+
+    /// <summary>
+    /// 현재 씬에서 새로 탐험된 픽셀 중 일부를 영구적으로 저장할 버퍼로 이동합니다.
+    /// 실제 저장은 씬 종료 시 CommitDeferredFogData를 통해 이루어집니다.
+    /// </summary>
+    /// <param name="percentage">전체 맵 픽셀 중 저장할 픽셀의 비율 (0.0 ~ 1.0)</param>
+    public void CommitPartialFogData(float percentage)
+    {
+        // Calculate total map pixels (textureSize * textureSize)
+        int totalMapPixels = textureSize * textureSize;
+
+        // Calculate how many pixels we *want* to move to the deferred buffer based on the percentage of the total map
+        int targetMovePixelCount = Mathf.FloorToInt(totalMapPixels * Mathf.Clamp01(percentage));
+
+        // Calculate how many pixels we *can* move from the newly explored buffer
+        int pixelsToActuallyMove = Mathf.Min(targetMovePixelCount, _newlyExploredPixelIndices.Count);
+
+        // Move selected pixels from _newlyExploredPixelIndices to _pixelsToCommitOnSceneEnd
+        for (int i = 0; i < pixelsToActuallyMove; i++)
+        {
+            _pixelsToCommitOnSceneEnd.Add(_newlyExploredPixelIndices[i]);
+        }
+
+        // Remove moved pixels from _newlyExploredPixelIndices
+        if (pixelsToActuallyMove > 0)
+        {
+            _newlyExploredPixelIndices.RemoveRange(0, pixelsToActuallyMove);
+        }
+        
+        Debug.Log($"[FogOfWar] {SceneManager.GetActiveScene().name}: {pixelsToActuallyMove}개의 픽셀이 지연 저장 버퍼로 이동되었습니다 (요청: {percentage * 100f}% of total map).");
+    }
+
+    /// <summary>
+    /// 씬 종료 시 지연된 안개 데이터를 영구적으로 저장합니다.
+    /// </summary>
+    /// <param name="commitAll">true이면 새로 탐험된 모든 픽셀과 지연된 픽셀을 저장합니다 (예: 게임 클리어 시).</param>
+    public void CommitDeferredFogData(bool commitAll = false)
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        // 1. 기존에 저장된 (영구적인) 안개 데이터를 로드합니다.
+        FogData existingSavedData = null;
+        if (PlayerPrefs.HasKey($"FogData_{sceneName}"))
+        {
+            string json = PlayerPrefs.GetString($"FogData_{sceneName}");
+            try
+            {
+                existingSavedData = JsonUtility.FromJson<FogData>(json);
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError($"[FogOfWar] {sceneName}: 기존 안개 데이터 로드 실패 (JSON 파싱 오류): {e.Message}. 지연 저장에 실패했습니다.");
+                return;
+            }
+        }
+
+        // 기존 데이터가 없으면 현재 _isExplored를 기반으로 초기화
+        if (existingSavedData == null || existingSavedData.isExplored == null || existingSavedData.isExplored.Length == 0)
+        {
+            existingSavedData = new FogData(new Color[textureSize * textureSize], new bool[textureSize * textureSize]);
+            for (int i = 0; i < existingSavedData.isExplored.Length; i++)
+            {
+                existingSavedData.isExplored[i] = false; // 모두 미탐험으로 초기화
+            }
+        }
+
+        // 2. 지연된 픽셀들을 기존 저장 데이터에 병합합니다.
+        foreach (int index in _pixelsToCommitOnSceneEnd)
+        {
+            if (index >= 0 && index < existingSavedData.isExplored.Length)
+            {
+                existingSavedData.isExplored[index] = true;
+            }
+        }
+
+        // 3. commitAll이 true이면 새로 탐험된 모든 픽셀도 병합합니다.
+        if (commitAll)
+        {
+            foreach (int index in _newlyExploredPixelIndices)
+            {
+                if (index >= 0 && index < existingSavedData.isExplored.Length)
+                {
+                    existingSavedData.isExplored[index] = true;
+                }
+            }
+        }
+
+        // 4. 병합된 데이터를 PlayerPrefs에 저장합니다.
+        string jsonToSave = JsonUtility.ToJson(existingSavedData);
+        PlayerPrefs.SetString($"FogData_{sceneName}", jsonToSave);
+        PlayerPrefs.Save();
+        Debug.Log($"[FogOfWar] {sceneName}: 지연된 안개 데이터가 영구적으로 저장되었습니다. (Commit All: {commitAll})");
+
+        // 5. 버퍼를 클리어합니다.
+        _pixelsToCommitOnSceneEnd.Clear();
+        _newlyExploredPixelIndices.Clear();
     }
 
     private void SaveFogData(string sceneName)
@@ -184,9 +287,22 @@ public class FogOfWarManager : MonoBehaviour
                 FogData data = JsonUtility.FromJson<FogData>(json);
 
                 // 초기화 및 데이터 적용
-                InitializeFogInternal(); // 내부 초기화 (텍스처, 배열 크기 등)
-                _exploredPixels = data.ToColorArray();
-                _isExplored = data.isExplored;
+                InitializeFogInternal(); // Initialize _exploredPixels and _isExplored arrays
+                _isExplored = data.isExplored; // Load the boolean explored status
+
+                // Reconstruct _exploredPixels based on the loaded _isExplored status
+                for (int i = 0; i < _isExplored.Length; i++)
+                {
+                    if (_isExplored[i])
+                    {
+                        _exploredPixels[i] = exploredColor; // Set to explored color if true
+                    }
+                    else
+                    {
+                        _exploredPixels[i] = unexploredColor; // Set to unexplored color (black) if false
+                    }
+                }
+
                 CalculateInitialExploredCount();
                 UpdateExploredStatusTextureOnGPU();
                 Debug.Log($"[FogOfWar] {sceneName}: 안개 데이터 불러옴. 픽셀 수: {_exploredPixels.Length}");
@@ -342,7 +458,7 @@ public class FogOfWarManager : MonoBehaviour
             // 설정한 각도에 따라 전방과 원형 시야 거리 다르게 설정
             Vector3 direction = new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle));
             float angleToForward = Vector3.Angle(forwardDirection, direction);
-            if (angleToForward <= rayRotateRange)
+            if (angleToForward <= (rayRotateRange + visionAngleBonus))
                 sightRadiusWorld = rayForwardMaxDistance;
             else
                 sightRadiusWorld = rayCircleMaxDistance;
@@ -508,6 +624,7 @@ public class FogOfWarManager : MonoBehaviour
                 {
                     _exploredPixelCount++;
                     _isExplored[index] = true;
+                    _newlyExploredPixelIndices.Add(index); // NEW: Add to list
 
                     if (ExplorationStatManager.instance != null)
                     {
@@ -600,4 +717,3 @@ public class FogOfWarManager : MonoBehaviour
         }
     }
 }
-﻿

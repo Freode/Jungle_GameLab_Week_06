@@ -4,7 +4,9 @@ public class PlayerMove : MonoBehaviour
 {
     [Header("Movement Settings")]
     [Tooltip("캐릭터의 이동 속도를 설정합니다.")]
-    public float moveSpeed = 8f;
+    public float baseMoveSpeed = 8f; // 기본 이동 속도
+    public float additiveSpeedBonus = 0f; // 버프 등을 위한 추가 이동 속도 (덧셈)
+    private float _currentMoveSpeed; // 실제 적용될 이동 속도
 
     [Header("Mouse Look Settings")]
     public LayerMask groundLayer;       // 마우스가 갑지할 레이더
@@ -40,10 +42,13 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
+        // 실제 이동 속도 계산
+        _currentMoveSpeed = baseMoveSpeed + additiveSpeedBonus;
+
         // --- 3. 물리 엔진을 통해 캐릭터 이동시키기 ---
         // 물리 관련 처리는 FixedUpdate에서 하는 것이 안정적입니다.
         // Rigidbody의 속도(velocity)를 직접 제어하여 캐릭터를 부드럽게 움직입니다.
-        _rb.linearVelocity = _moveInput * moveSpeed;
+        _rb.linearVelocity = _moveInput * _currentMoveSpeed;
     }
 
     // 마우스 위치로 Ray 발사

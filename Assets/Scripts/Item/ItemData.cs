@@ -4,8 +4,9 @@ using UnityEngine;
 public enum ItemGrade { Common, Rare, Epic, Legendary }
 
 // 아이템이 제공하는 효과의 종류를 나타내는 Enum
-public enum BuffType
+public enum BuffType 
 {
+    None,                   // 효과 없음
     // 체력 관련
     MaxHealthIncrease,      // 최대 체력 영구 증가
     MaxHealthBuff,          // 최대 체력 일시적 증가 (버프)
@@ -15,9 +16,12 @@ public enum BuffType
     AttackPowerIncrease,    // 공격력 영구 증가
     AttackPowerBuff,        // 공격력 일시적 증가 (버프)
 
-    // 기타 (예시)
+    // 새로운 효과들
     MovementSpeedBuff,      // 이동 속도 증가
-    EnergyRecover           // 에너지 회복
+    VisionAngleBuff,        // 시야각 증가
+    PartialExplorationSave, // 탐험 진행도 일부 저장
+    EnergyRecover,          // 에너지 회복
+    WaterRecover            // 물 회복
 }
 
 // 각 아이템의 속성을 정의하는 클래스
