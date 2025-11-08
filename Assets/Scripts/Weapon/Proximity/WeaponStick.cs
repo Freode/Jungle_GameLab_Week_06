@@ -19,7 +19,7 @@ public class WeaponStick : MonoBehaviour
     private BoxCollider _boxCollider;
     private Coroutine _attackCoroutine;
     private List<ITakeDamage> _hitTargets = new List<ITakeDamage>();
-    private int _damage = 0;
+    private float _damage = 0;
 
     void Awake()
     {

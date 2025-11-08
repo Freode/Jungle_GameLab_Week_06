@@ -60,10 +60,10 @@ public class PlayerStateUI : MonoBehaviour
         textLevel.text = $"Lv : <color=#00FF00>{PlayerDataManager.instance.GetCurrentLevel()}</color>";
         textExp.text = $"Exp :  <color=#00FF00>{PlayerDataManager.instance.GetCurrentExp()}</color>/{PlayerDataManager.instance.GetMaxExp()}";
 
-        textHp.text = $"HP : <color=#00FF00>{PlayerDataManager.instance.GetCurrentHealth():F1}</color>/{PlayerDataManager.instance.GetMaxHealth():F1}";
+        textHp.text = $"HP : <color=#00FF00>{PlayerDataManager.instance.GetCurrentHealth():F2}</color>/{PlayerDataManager.instance.GetMaxHealth():F2}(<color=#FF0000>{PlayerDataManager.instance.currentMaxHealth:F2}</color>+<color=#FFA500>{PlayerDataManager.instance.stagePersistMaxHealth:F2}</color>+<color=#FFFF00>{PlayerDataManager.instance.stageBuffMaxHealth:F2}</color>)";
         textEnergy.text = $"Energy :  <color=#00FF00>{PlayerDataManager.instance.GetCurrentEnergy()}</color>/{PlayerDataManager.instance.GetMaxEnergy()}";
         textWater.text = $"Water :  <color=#00FF00>{PlayerDataManager.instance.GetCurrentWater()}</color>/{PlayerDataManager.instance.GetMaxWater()}";
-        textAttack.text = $"Attack :  <color=#00FF00>{PlayerDataManager.instance.GetAttackPower()}</color>";
+        textAttack.text = $"Attack :  <color=#00FF00>{PlayerDataManager.instance.GetAttackPower():F2}</color>(<color=#FF0000>{PlayerDataManager.instance.currentAttackPower:F2}</color>+<color=#FFA500>{PlayerDataManager.instance.stagePersistPower:F2}</color>+<color=#FFFF00>{PlayerDataManager.instance.stageBuffPower:F2}</color>)";
         textRange.text = $"Range :  <color=#00FF00>{PlayerDataManager.instance.GetCurrentRange()}</color>";
     }
 

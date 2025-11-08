@@ -90,8 +90,12 @@ public class FogOfWarManager : MonoBehaviour
         }
     }
 
+    public static FogOfWarManager instance;
+
     void Awake()
     {
+        instance = this;
+
         Debug.Log("[FogOfWar] FogOfWarManager Awake: 씬 로드/언로드 이벤트 구독 시도.");
         _mainCamera = Camera.main;
         // 씬 로드/언로드 이벤트 구독
@@ -102,10 +106,16 @@ public class FogOfWarManager : MonoBehaviour
         OnSceneLoaded(currentScene, LoadSceneMode.Single);
 
         // 초기화는 OnSceneLoaded에서 처리
+
     }
 
     void OnDestroy()
     {
+        if (instance == this)
+        {
+            instance = null;
+        }
+
         // 오브젝트 파괴 시 이벤트 구독 해제
         //SceneManager.sceneLoaded -= OnSceneLoaded;
         //SceneManager.sceneUnloaded -= OnSceneUnloaded;
@@ -132,10 +142,17 @@ public class FogOfWarManager : MonoBehaviour
 
     private void OnSceneUnloaded(Scene scene)
     {
-        // 씬 언로드 시 안개 데이터 저장
-        SaveFogData(scene.name);
-        // 코루틴 정지
+        // 씬 언로드 시 코루틴만 정지. 저장은 CommitFogData()를 통해 수동으로 이루어집니다.
         StopAllCoroutines();
+        Debug.Log($"[FogOfWar] {scene.name}: Scene unloaded. Fog update coroutine stopped.");
+    }
+
+    /// <summary>
+    /// 현재 씬의 탐험 데이터를 영구적으로 저장합니다. 스테이지 탈출 성공 시 호출해야 합니다.
+    /// </summary>
+    public void CommitFogData()
+    {
+        SaveFogData(SceneManager.GetActiveScene().name);
     }
 
     private void SaveFogData(string sceneName)
@@ -491,6 +508,11 @@ public class FogOfWarManager : MonoBehaviour
                 {
                     _exploredPixelCount++;
                     _isExplored[index] = true;
+
+                    if (ExplorationStatManager.instance != null)
+                    {
+                        ExplorationStatManager.instance.OnPixelExplored(_isExplored.Length);
+                    }
                 }
 
                 _updatePixels.Enqueue(index);

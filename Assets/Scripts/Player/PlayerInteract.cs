@@ -17,6 +17,18 @@ public class PlayerInteract : MonoBehaviour
     {
         if (MouseHoverEnter() == false)
             MouseHoverExit();
+
+        // --- NEW CODE TO HANDLE CLICK ---
+        // Check for a left mouse button click
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Check if we are currently hovering over an interactable object
+            if (_lastInteractable != null)
+            {
+                // Call the OnClick method on that object
+                _lastInteractable.OnClick();
+            }
+        }
     }
 
     // 마우스와 상호작용

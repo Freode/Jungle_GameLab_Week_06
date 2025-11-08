@@ -24,6 +24,7 @@ public class EscapePointTrigger : MonoBehaviour
             if (_escapeTimer >= timeToEscape)
             {
                 Debug.Log($"탈출 구역에서 {timeToEscape}초 경과. {sceneToLoad} 씬으로 이동합니다.");
+                PlayerDataManager.instance.SaveStageData(true);
                 SceneManager.LoadScene(sceneToLoad);
             }
         }
