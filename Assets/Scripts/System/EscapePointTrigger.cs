@@ -25,6 +25,7 @@ public class EscapePointTrigger : MonoBehaviour
             {
                 Debug.Log($"탈출 구역에서 {timeToEscape}초 경과. {sceneToLoad} 씬으로 이동합니다.");
                 PlayerDataManager.instance.SaveStageData(true);
+                MarkerManager.instance.AddMarker(transform.position, "Escape Point", Color.green);
                 SceneManager.LoadScene(sceneToLoad);
             }
         }

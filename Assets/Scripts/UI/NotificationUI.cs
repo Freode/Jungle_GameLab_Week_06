@@ -50,26 +50,26 @@ public class NotificationUI : MonoBehaviour
         }
 
         Color color = Color.white;
-        switch(item.grade)
+        switch(item.rarity)
         {
-            case ItemGrade.Legendary:
+            case ItemRarity.Legendary:
                 color = Color.red;
                 break;
 
-            case ItemGrade.Epic:
+            case ItemRarity.Epic:
                 color = Color.yellow;
                 break;
 
-            case ItemGrade.Rare:
+            case ItemRarity.Rare:
                 color = Color.green;
                 break;
 
-            case ItemGrade.Common:
+            case ItemRarity.Common:
                 color = Color.white;
                 break;
         }
 
-        textGrade.text = $"<color=#{ColorUtility.ToHtmlStringRGBA(color)}><{item.grade.ToString()}></color>";
+        textGrade.text = $"<color=#{ColorUtility.ToHtmlStringRGBA(color)}><{item.rarity.ToString()}></color>";
         notificationText.text = $"{item.description}";
 
 

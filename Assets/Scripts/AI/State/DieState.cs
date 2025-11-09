@@ -24,6 +24,7 @@ public class DieState : State<EnemyAI>
         {
             FuncSystem.UpdateGameObjectLayerAll(owner.gameObject, LayerMask.NameToLayer("Interact"));
             baseInteract.enabled = true;
+            baseInteract.SetIsActive(true);
         }
 
         owner.SetUpdate(false);

@@ -11,7 +11,7 @@ public class ItemManager : MonoBehaviour
 
     private class ActiveBuff
     {
-        public BuffType Type;
+        public ItemEffectType Type;
         public float Value;
         public Coroutine RemovalCoroutine;
     }
@@ -39,24 +39,12 @@ public class ItemManager : MonoBehaviour
 
     private void FindPlayerComponents()
     {
-        if (_playerMove == null) // Only try to find if not already found
+        if (_playerMove == null)
         {
-            GameObject playerGameObject = GameObject.FindGameObjectWithTag("Player"); // Assuming "Player" tag
+            GameObject playerGameObject = GameObject.FindGameObjectWithTag("Player");
             if (playerGameObject != null)
             {
                 _playerMove = playerGameObject.GetComponent<PlayerMove>();
-                if (_playerMove == null)
-                {
-                    Debug.LogWarning("[ItemManager] PlayerMove component not found on GameObject with tag 'Player'.");
-                }
-                else
-                {
-                    Debug.Log("[ItemManager] PlayerMove component found on GameObject with tag 'Player'.");
-                }
-            }
-            else
-            {
-                Debug.LogWarning("[ItemManager] GameObject with tag 'Player' not found in scene. Ensure it has the 'Player' tag.");
             }
         }
     }
@@ -67,42 +55,38 @@ public class ItemManager : MonoBehaviour
 
         Debug.Log($"Applying effect of item: {item.itemName}");
 
-        if (item.buffType == BuffType.MovementSpeedBuff || item.buffType == BuffType.VisionAngleBuff)
+        // 버프(일시적 효과)와 영구/스테이지 효과를 분리하여 처리
+        if (item.durationType == DurationType.Buff)
         {
             HandleStackingBuff(item);
         }
-        else
+        else // Permanent 또는 Stage 타입의 효과 처리
         {
-            switch (item.buffType)
+            switch (item.effectType)
             {
-                case BuffType.None:
+                case ItemEffectType.Nothing:
                     break;
-                case BuffType.MaxHealthIncrease:
+                case ItemEffectType.MaxHealth: // 최대 체력 증가 (스테이지)
                     PlayerDataManager.instance.IncreaseCurrentMaxHealth(item.value);
                     break;
-                case BuffType.MaxHealthBuff:
-                    PlayerDataManager.instance.AddStageBuffMaxHealth(item.value);
-                    break;
-                case BuffType.HealthRecover:
+                case ItemEffectType.Health: // 현재 체력 회복
                     PlayerDataManager.instance.IncreaseCurrentHealth(item.value);
                     break;
-                case BuffType.AttackPowerIncrease:
+                case ItemEffectType.AttackDamage: // 공격력 증가 (스테이지)
                     PlayerDataManager.instance.IncreaseCurrentAttackPower(item.value);
                     break;
-                case BuffType.AttackPowerBuff:
-                    PlayerDataManager.instance.AddStageBuffPower(item.value);
-                    break;
-                case BuffType.EnergyRecover:
+                case ItemEffectType.Energy: // 에너지 회복
                     PlayerDataManager.instance.IncreaseCurrentEnergy((int)item.value);
                     break;
-                case BuffType.WaterRecover:
+                case ItemEffectType.Water: // 물 회복
                     PlayerDataManager.instance.IncreaseCurrentWater((int)item.value);
                     break;
-                case BuffType.PartialExplorationSave:
+                case ItemEffectType.StatSave: // 부분 기록 저장
                     HandlePartialSave(item.value);
                     break;
+                // KeyMarker, Shelter 등 다른 영구 효과는 여기서 처리 가능
                 default:
-                    Debug.LogWarning($"Unhandled BuffType: {item.buffType}");
+                    Debug.LogWarning($"Unhandled Permanent/Stage EffectType: {item.effectType}");
                     break;
             }
         }
@@ -111,81 +95,70 @@ public class ItemManager : MonoBehaviour
 
     private void HandleStackingBuff(ItemData item)
     {
-        ActiveBuff existingBuff = _activeBuffs.FirstOrDefault(b => b.Type == item.buffType);
+        ActiveBuff existingBuff = _activeBuffs.FirstOrDefault(b => b.Type == item.effectType);
 
         if (existingBuff != null)
         {
-            StopCoroutine(existingBuff.RemovalCoroutine);
+            if(existingBuff.RemovalCoroutine != null) StopCoroutine(existingBuff.RemovalCoroutine);
 
             if (item.value > existingBuff.Value)
             {
-                ApplyBuffValue(item.buffType, item.value, existingBuff.Value);
+                ApplyBuffValue(item.effectType, item.value, existingBuff.Value);
                 existingBuff.Value = item.value;
             }
             
             existingBuff.RemovalCoroutine = StartCoroutine(RemoveBuffAfterDuration(existingBuff, item.duration));
-            Debug.Log($"Refreshed {item.buffType} buff. New value: {existingBuff.Value}.");
+            Debug.Log($"Refreshed {item.effectType} buff. New value: {existingBuff.Value}.");
         }
         else
         {
-            ApplyBuffValue(item.buffType, item.value, 0);
+            ApplyBuffValue(item.effectType, item.value, 0);
             
-            var newBuff = new ActiveBuff { Type = item.buffType, Value = item.value };
+            var newBuff = new ActiveBuff { Type = item.effectType, Value = item.value };
             newBuff.RemovalCoroutine = StartCoroutine(RemoveBuffAfterDuration(newBuff, item.duration));
             _activeBuffs.Add(newBuff);
-            Debug.Log($"Applied new {item.buffType} buff with value {item.value}.");
+            Debug.Log($"Applied new {item.effectType} buff with value {item.value}.");
         }
     }
 
-    private void ApplyBuffValue(BuffType type, float newValue, float oldValue)
+    private void ApplyBuffValue(ItemEffectType type, float newValue, float oldValue)
     {
         float delta = newValue - oldValue;
         switch (type)
         {
-            case BuffType.MovementSpeedBuff:
+            case ItemEffectType.MoveSpeed:
                 if (_playerMove == null) FindPlayerComponents();
-                if (_playerMove != null)
-                {
-                    _playerMove.additiveSpeedBonus += delta; // Add the delta to the additive bonus
-                    Debug.Log($"[ItemManager] Applied MovementSpeedBuff. New additiveSpeedBonus: {_playerMove.additiveSpeedBonus}");
-                }
-                else
-                {
-                    Debug.LogWarning("[ItemManager] Cannot apply MovementSpeedBuff, PlayerMove is null.");
-                }
+                if (_playerMove != null) _playerMove.additiveSpeedBonus += delta;
                 break;
-            case BuffType.VisionAngleBuff:
-                if (FogOfWarManager.instance != null)
-                {
-                    FogOfWarManager.instance.visionAngleBonus += delta;
-                    Debug.Log($"[ItemManager] Applied VisionAngleBuff. New visionAngleBonus: {FogOfWarManager.instance.visionAngleBonus}");
-                }
-                else
-                {
-                    Debug.LogWarning("[ItemManager] Cannot apply VisionAngleBuff, FogOfWarManager is null.");
-                }
+            case ItemEffectType.ViewAngle:
+                if (FogOfWarManager.instance != null) FogOfWarManager.instance.visionAngleBonus += delta;
                 break;
+            case ItemEffectType.MaxHealth: // 버프 타입의 최대 체력
+                if (PlayerDataManager.instance != null) PlayerDataManager.instance.AddStageBuffMaxHealth(delta);
+                break;
+            case ItemEffectType.AttackDamage: // 버프 타입의 공격력
+                if (PlayerDataManager.instance != null) PlayerDataManager.instance.AddStageBuffPower(delta);
+                break;
+            case ItemEffectType.FullView:
+                 if (FogOfWarManager.instance != null) FogOfWarManager.instance.visionAngleBonus += delta;
+                 break;
         }
     }
 
     private IEnumerator RemoveBuffAfterDuration(ActiveBuff buff, float duration)
     {
-        yield return new WaitForSeconds(duration);
-
-        switch(buff.Type)
+        // duration이 0보다 클 때만 대기
+        if(duration > 0)
         {
-            case BuffType.MovementSpeedBuff:
-                if (_playerMove != null)
-                {
-                    _playerMove.additiveSpeedBonus -= buff.Value; // Subtract the buff's value
-                    Debug.Log($"[ItemManager] Removed MovementSpeedBuff. New additiveSpeedBonus: {_playerMove.additiveSpeedBonus}");
-                }
-                break;
-            case BuffType.VisionAngleBuff:
-                // Revert bonus to 0 by passing 0 as the "new" value
-                ApplyBuffValue(buff.Type, 0f, buff.Value); 
-                break;
+            yield return new WaitForSeconds(duration);
         }
+        else // 0 이하면 한 프레임만 대기 후 제거 (혹은 즉시 제거)
+        {
+            yield return null;
+        }
+
+        // 버프 효과 되돌리기
+        ApplyBuffValue(buff.Type, 0f, buff.Value); 
         
         _activeBuffs.Remove(buff);
         Debug.Log($"Removed {buff.Type} buff.");
@@ -195,7 +168,8 @@ public class ItemManager : MonoBehaviour
     {
         if (PlayerDataManager.instance == null) return;
 
-        float percentageValue = Mathf.Clamp01(percentage);
+        float percentageValue = percentage / 100f; // 0.5% -> 0.005
+        Mathf.Clamp01(percentageValue);
 
         float healthToSave = PlayerDataManager.instance.stagePersistMaxHealth * percentageValue;
         float powerToSave = PlayerDataManager.instance.stagePersistPower * percentageValue;
@@ -216,6 +190,6 @@ public class ItemManager : MonoBehaviour
             FogOfWarManager.instance.CommitPartialFogData(percentageValue);
         }
 
-        Debug.Log($"Partially saved {percentageValue * 100f}% of exploration progress.");
+        Debug.Log($"Partially saved {percentage * 100f}% of exploration progress.");
     }
 }

@@ -10,6 +10,7 @@ public class BaseInteract : MonoBehaviour, IInteract
 
     public GameObject interactUI;
     protected bool _canInteract = false;
+    public bool _isActive = true;
 
     void Start()
     {
@@ -26,6 +27,9 @@ public class BaseInteract : MonoBehaviour, IInteract
         if (OnCheck != null && OnCheck.Invoke() == false)
             return;
 
+        if (_isActive == false)
+            return;
+
         if (_canInteract)
         {
             interactUI.gameObject.SetActive(true);
@@ -37,10 +41,13 @@ public class BaseInteract : MonoBehaviour, IInteract
 
     void IInteract.OnHoverExit()
     {
-        interactUI.gameObject.SetActive(false);
+        if (interactUI.gameObject.activeSelf)
+        {
+            interactUI.gameObject.SetActive(false);
 
-        foreach (GameObject outlineObject in outlineObjects)
-            outlineObject.layer = LayerMask.NameToLayer("Interact");
+            foreach (GameObject outlineObject in outlineObjects)
+                outlineObject.layer = LayerMask.NameToLayer("Interact");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -62,5 +69,10 @@ public class BaseInteract : MonoBehaviour, IInteract
             _canInteract = false;
             ((IInteract)this).OnHoverExit();
         }
+    }
+
+    public void SetIsActive(bool newActive)
+    {
+        _isActive = newActive;
     }
 }

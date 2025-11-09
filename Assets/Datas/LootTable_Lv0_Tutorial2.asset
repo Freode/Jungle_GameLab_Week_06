@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dfc0222e06e60e499334aa8bda63e28, type: 3}
+  m_Name: LootTable_Lv0_Tutorial2
+  m_EditorClassIdentifier: 
+  lootEntries:
+  - item: {fileID: 11400000, guid: cbb60b96e15869244893e619d0298ed8, type: 2}
+    probabilityWeight: 5
+  - item: {fileID: 11400000, guid: f6bff31040a7022419e89f22e630796d, type: 2}
+    probabilityWeight: 10
+  - item: {fileID: 11400000, guid: feffe59aafe969c43940dbab5d3377d1, type: 2}
+    probabilityWeight: 10
+  - item: {fileID: 11400000, guid: 648ab1b9cb18eee45aff6121970fa874, type: 2}
+    probabilityWeight: 5
+  - item: {fileID: 11400000, guid: 7518fcccc95c8f34187e0a1845111190, type: 2}
+    probabilityWeight: 5
+  - item: {fileID: 11400000, guid: e36955e97e108e04da45aca5cef3aea7, type: 2}
+    probabilityWeight: 5
+  - item: {fileID: 11400000, guid: 366bbd077bf6be4449bf32d0129a3fcc, type: 2}
+    probabilityWeight: 5
+  - item: {fileID: 11400000, guid: 204a72879dbad9c4c8c35757334d8119, type: 2}
+    probabilityWeight: 10
+  - item: {fileID: 11400000, guid: 478e0406a8ba9a746aaf7bb7f6e44e6c, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: 3346b415d8b03a142a132acecfdf1b16, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: 7c7db0685feb0f9428a44fa1fe72c348, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: f3552e2fe2cdc5c40b2e8ba3f74c0a29, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: 58610da3ad75a594abe28ecb4d22550a, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: 5900e82ac7b2a54478eb3741e4be70a6, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: caf51dd9c7947434cb787e1594038b84, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: 32653e51ae42a374d966a2005a9d7ce6, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: a558801bd3c2fce45b366a1b0bb68058, type: 2}
+    probabilityWeight: 2
+  - item: {fileID: 11400000, guid: 09798cebd7ba8764794d151d165d5031, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: 9c9dbbd319d647144a823562ede2178b, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: de9307d199ad7dc4c81cd45fded94438, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: 8d031879aa03261429097e7004ca5c71, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: 7c4a165e02fb62844aa5e612a185b51a, type: 2}
+    probabilityWeight: 1
+  - item: {fileID: 11400000, guid: 2795b7ed16991214fb3b73fc359035ab, type: 2}
+    probabilityWeight: 3
+  - item: {fileID: 11400000, guid: 04213300c2a21d442be0c8d47bbef286, type: 2}
+    probabilityWeight: 5
+  - item: {fileID: 11400000, guid: 578c795e80c872f46851d69e6f221aa3, type: 2}
+    probabilityWeight: 4
+  - item: {fileID: 11400000, guid: 567db9ae0deb21b4dbc56ca1dc5bf43f, type: 2}
+    probabilityWeight: 3
+  - item: {fileID: 11400000, guid: c8e6a43667b22e8459cf0038a49a5864, type: 2}
+    probabilityWeight: 5
+  - item: {fileID: 11400000, guid: 3e91728b0f938bc4f85a908137d7d8ac, type: 2}
+    probabilityWeight: 3
+  - item: {fileID: 11400000, guid: 32653e51ae42a374d966a2005a9d7ce6, type: 2}
+    probabilityWeight: 3
+  - item: {fileID: 11400000, guid: a558801bd3c2fce45b366a1b0bb68058, type: 2}
+    probabilityWeight: 4

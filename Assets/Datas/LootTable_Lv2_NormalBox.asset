@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dfc0222e06e60e499334aa8bda63e28, type: 3}
+  m_Name: LootTable_Lv2_NormalBox
+  m_EditorClassIdentifier: 
+  lootEntries:
+  - item: {fileID: 11400000, guid: f6bff31040a7022419e89f22e630796d, type: 2}
+    probabilityWeight: 15
+  - item: {fileID: 11400000, guid: 204a72879dbad9c4c8c35757334d8119, type: 2}
+    probabilityWeight: 15
+  - item: {fileID: 11400000, guid: 7518fcccc95c8f34187e0a1845111190, type: 2}
+    probabilityWeight: 10
+  - item: {fileID: 11400000, guid: e36955e97e108e04da45aca5cef3aea7, type: 2}
+    probabilityWeight: 5
+  - item: {fileID: 11400000, guid: feffe59aafe969c43940dbab5d3377d1, type: 2}
+    probabilityWeight: 15
+  - item: {fileID: 11400000, guid: 04213300c2a21d442be0c8d47bbef286, type: 2}
+    probabilityWeight: 10
+  - item: {fileID: 11400000, guid: 6984901606a895d449107638e125a52c, type: 2}
+    probabilityWeight: 10
+  - item: {fileID: 11400000, guid: c8e6a43667b22e8459cf0038a49a5864, type: 2}
+    probabilityWeight: 5
+  - item: {fileID: 11400000, guid: 3e91728b0f938bc4f85a908137d7d8ac, type: 2}
+    probabilityWeight: 5
+  - item: {fileID: 11400000, guid: 578c795e80c872f46851d69e6f221aa3, type: 2}
+    probabilityWeight: 10

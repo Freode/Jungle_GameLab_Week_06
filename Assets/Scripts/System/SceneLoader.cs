@@ -34,6 +34,7 @@ public class SceneLoader : MonoBehaviour
         if (other.CompareTag(playerTag) && _isActive)
         {
             Debug.Log($"플레이어가 트리거에 진입하여 {sceneToLoad} 씬으로 이동합니다.");
+            MarkerManager.instance.AddMarker(transform.position, sceneToLoad + " Point", Color.red);
             SceneManager.LoadScene(sceneToLoad);
         }
     }

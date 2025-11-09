@@ -4,36 +4,44 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewLootTable", menuName = "Inventory/Loot Table")]
 public class LootTable : ScriptableObject
 {
-    public List<ItemData> items;
+    // Wrapper class to hold ItemData and its probability weight
+    [System.Serializable]
+    public class LootEntry
+    {
+        public ItemData item;
+        public float probabilityWeight = 1f; // Default weight
+    }
+
+    public List<LootEntry> lootEntries; // Changed from 'items' to 'lootEntries'
 
     // Get a random item from the list based on weights
     public ItemData GetRandomItem()
     {
-        if (items == null || items.Count == 0)
+        if (lootEntries == null || lootEntries.Count == 0)
         {
             return null;
         }
 
         float totalWeight = 0;
-        foreach (var item in items)
+        foreach (var entry in lootEntries)
         {
-            totalWeight += item.probabilityWeight;
+            totalWeight += entry.probabilityWeight;
         }
 
         float randomPoint = Random.Range(0, totalWeight);
 
-        foreach (var item in items)
+        foreach (var entry in lootEntries)
         {
-            if (randomPoint < item.probabilityWeight)
+            if (randomPoint < entry.probabilityWeight)
             {
-                return item;
+                return entry.item; // Return the actual ItemData
             }
             else
             {
-                randomPoint -= item.probabilityWeight;
+                randomPoint -= entry.probabilityWeight;
             }
         }
         // Should not happen if weights are set up correctly, but as a fallback
-        return items[items.Count - 1];
+        return lootEntries[lootEntries.Count - 1].item;
     }
 }

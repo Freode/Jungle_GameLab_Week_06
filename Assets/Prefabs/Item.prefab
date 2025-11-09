@@ -74,7 +74,7 @@ MonoBehaviour:
   interactUI: {fileID: 8922384301121657161}
   useIcon: {fileID: 3472895122081041427}
   isDebugMode: 0
-  lootTable: {fileID: 11400000, guid: 190152b900e14b947855a772e561c515, type: 2}
+  lootTable: {fileID: 11400000, guid: 74afc5dff214e8c4db5b59ac5264f75a, type: 2}
   destroyOnUse: 0
 --- !u!1 &3472895122081041427
 GameObject:

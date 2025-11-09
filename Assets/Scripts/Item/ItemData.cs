@@ -1,43 +1,54 @@
 using UnityEngine;
 
-// 아이템의 등급을 나타내는 Enum (열거형)
-public enum ItemGrade { Common, Rare, Epic, Legendary }
-
-// 아이템이 제공하는 효과의 종류를 나타내는 Enum
-public enum BuffType 
+// 아이템 등급
+public enum ItemRarity
 {
-    None,                   // 효과 없음
-    // 체력 관련
-    MaxHealthIncrease,      // 최대 체력 영구 증가
-    MaxHealthBuff,          // 최대 체력 일시적 증가 (버프)
-    HealthRecover,          // 현재 체력 즉시 회복
-
-    // 공격력 관련
-    AttackPowerIncrease,    // 공격력 영구 증가
-    AttackPowerBuff,        // 공격력 일시적 증가 (버프)
-
-    // 새로운 효과들
-    MovementSpeedBuff,      // 이동 속도 증가
-    VisionAngleBuff,        // 시야각 증가
-    PartialExplorationSave, // 탐험 진행도 일부 저장
-    EnergyRecover,          // 에너지 회복
-    WaterRecover            // 물 회복
+    Common,
+    Rare,
+    Epic,
+    Legendary
 }
 
-// 각 아이템의 속성을 정의하는 클래스
-[System.Serializable] // Unity 인스펙터에서 보기 위함
-public class ItemData
+// 아이템 효과 종류
+public enum ItemEffectType
 {
-    public string itemName;         // 아이템 이름
-    public string description;      // 아이템 설명
-    public ItemGrade grade;         // 아이템 등급 (색상이나 이펙트 등에 활용)
+    MoveSpeed,
+    ViewAngle,
+    AttackDamage,
+    MaxHealth,
+    Energy,
+    Water,
+    Health,
+    StatSave,
+    KeyMarker,
+    Shelter,
+    FullView,
+    Nothing
+}
 
-    [Header("효과")]
-    public BuffType buffType;       // 어떤 종류의 효과인지
-    public float value;             // 효과의 수치 (예: 체력 20 증가)
-    public float duration;          // 지속 시간 (0이면 영구적인 효과)
+// 아이템 지속 타입
+public enum DurationType
+{
+    Buff,       // 현재 판(게임 오버 전까지)
+    Stage,      // 현재 스테이지
+    Permanent   // 영구 적용 (자원 회복, 스탯 저장 등)
+}
 
-    [Header("확률")]
-    [Range(0, 100)]
-    public float probabilityWeight; // 아이템 등장 확률 가중치
+[CreateAssetMenu(fileName = "ItemData", menuName = "ScriptableObjects/ItemData", order = 1)]
+public class ItemData : ScriptableObject
+{
+    [Header("Info")]
+    public string itemName;
+    [TextArea]
+    public string description;
+
+    [Header("Classification")]
+    public ItemRarity rarity;
+    public ItemEffectType effectType;
+    public DurationType durationType;
+
+    [Header("Values")]
+    public float value; // 수치적 효과 (예: +10, +5%)
+    public string stringValue; // 문자열 효과 (예: "Stage2_Key")
+    public float duration; // 버프 지속시간
 }

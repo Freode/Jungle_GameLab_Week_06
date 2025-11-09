@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dfc0222e06e60e499334aa8bda63e28, type: 3}
+  m_Name: LootTable_Lv0_Tutorial
+  m_EditorClassIdentifier: 
+  lootEntries:
+  - item: {fileID: 11400000, guid: f6bff31040a7022419e89f22e630796d, type: 2}
+    probabilityWeight: 30
+  - item: {fileID: 11400000, guid: 04213300c2a21d442be0c8d47bbef286, type: 2}
+    probabilityWeight: 15
+  - item: {fileID: 11400000, guid: 3346b415d8b03a142a132acecfdf1b16, type: 2}
+    probabilityWeight: 5
+  - item: {fileID: 11400000, guid: 204a72879dbad9c4c8c35757334d8119, type: 2}
+    probabilityWeight: 30
+  - item: {fileID: 11400000, guid: 6984901606a895d449107638e125a52c, type: 2}
+    probabilityWeight: 15
+  - item: {fileID: 11400000, guid: a558801bd3c2fce45b366a1b0bb68058, type: 2}
+    probabilityWeight: 5
